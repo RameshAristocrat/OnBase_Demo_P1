@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~material-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import "~@ng-select/ng-select/themes/material.theme.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: 'lato', 'arial', sans-serif; }
+@font-face {
+    font-family: lato;
+    src: url(assets/font/Lato/Lato-Regular.ttf) format("opentype");
+  }
+  body {
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: blue orange;   /* scroll thumb and track */
+  }
+
+  .cdk-overlay-container {
+    position: fixed !important;
+    z-index: 10000 !important;
+  }
+
+  .cdk-overlay-pane {
+    position: absolute;
+    pointer-events: auto;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    padding-left: 20px;
+    padding-right: 100px;
+    padding-top: 100px;
+}
+
+.warn-snackbar {
+  color: white;
+  background: #e50f7c;
+}
+
+/* Border Color */
+.ng-select.ng-invalid.ng-touched .ng-select-container{
+  border-color: red;
+}
+/* Arrow Color */
+.ng-select.ng-invalid.ng-touched .ng-arrow-wrapper .ng-arrow{
+  border-color: red transparent transparent
+}
+/* Placeholder Color */
+.ng-select.ng-invalid.ng-touched .ng-select-container .ng-placeholder{
+  color: red;
+}

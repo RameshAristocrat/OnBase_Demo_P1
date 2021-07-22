@@ -1,0 +1,211 @@
+[{
+  "page": "launcher",
+  "details": [{
+    "label": "Dashboard",
+    "url": "/main/launcher"
+  }]
+}, {
+  "page": "setuptable",
+  "details": [{
+    "label": "Setup Tables",
+    "url": "/main/launcher"
+  }]
+}, {
+  "page": "config",
+  "details": [{
+    "label": "Configs",
+    "url": "/main/launcher"
+  }]
+}, {
+  "page": "studio",
+  "details": [{
+    "label": "Studio",
+    "url": "/main/config/setuptable/studiosearch"
+  }]
+}, {
+  "page": "versionsearch",
+  "details": [{
+    "label": "Version",
+    "url": "/main/config/setuptable/versionsearch"
+  }]
+}, {
+  "page": "eppsearch",
+  "details": [{
+    "label": "EPP Ref",
+    "url": "/main/config/setuptable/eppsearch"
+  }]
+}, {
+  "page": "poolsearch",
+  "details": [{
+    "label": "Pool",
+    "url": "/main/config/setuptable/poolsearch"
+  }]
+}, {
+  "page": "regionsearch",
+  "details": [{
+    "label": "Region",
+    "url": "/main/config/setuptable/regionsearch"
+  }]
+}, {
+  "page": "devtype1search",
+  "details": [{
+    "label": "Dev Type1",
+    "url": "/main/config/setuptable/devtype1search"
+  }]
+}, {
+  "page": "devtype2search",
+  "details": [{
+    "label": "Dev Type2 / Class",
+    "url": "/main/config/setuptable/devtype2search"
+  }]
+}, {
+  "page": "prodcat1search",
+  "details": [{
+    "label": "Prodcat1",
+    "url": "/main/config/setuptable/prodcat1search"
+  }]
+}, {
+  "page": "prodcat2search",
+  "details": [{
+    "label": "Prodcat2",
+    "url": "/main/config/setuptable/prodcat2search"
+  }]
+}, {
+  "page": "prodcat3search",
+  "details": [{
+    "label": "Prodcat3",
+    "url": "/main/config/setuptable/prodcat3search"
+  }]
+}, {
+  "page": "channeltype",
+  "details": [{
+    "label": "Channel Type",
+    "url": "/main/config/setuptable/channeltype/search"
+  }, {
+    "label": "Channel Type",
+    "url": "/main/config/setuptable/channeltype/add"
+  }, {
+    "label": "Channel Type",
+    "url": "/main/config/setuptable/channeltype/edit"
+  }]
+}, {
+  "page": "channel",
+  "details": [{
+    "label": "Channel",
+    "url": "/main/config/setuptable/channel/search"
+  }, {
+    "label": "Channel",
+    "url": "/main/config/setuptable/channel/add"
+  }, {
+    "label": "Channel",
+    "url": "/main/config/setuptable/channel/edit"
+  }]
+}, {
+  "page": "devefforttype",
+  "details": [{
+    "label": "Dev Effort Type",
+    "url": "/main/config/setuptable/devefforttype/search"
+  }, {
+    "label": "Dev Effort Type",
+    "url": "/main/config/setuptable/devefforttype/add"
+  }, {
+    "label": "Dev Effort Type",
+    "url": "/main/config/setuptable/devefforttype/edit"
+  }]
+}, {
+  "page": "devcomplexity",
+  "details": [{
+    "label": "Dev Complexity",
+    "url": "/main/config/setuptable/devcomplexity/search"
+  }, {
+    "label": "Dev Complexity",
+    "url": "/main/config/setuptable/devcomplexity/add"
+  }, {
+    "label": "Dev Complexity",
+    "url": "/main/config/setuptable/devcomplexity/edit"
+  }]
+},{
+  "page": "cabinets",
+  "details": [{
+    "label": "Cabinets",
+    "url": "/main/config/setuptable/cabinets/search"
+  }, {
+    "label": "Cabinets",
+    "url": "/main/config/setuptable/cabinets/add"
+  }, {
+    "label": "Cabinets",
+    "url": "/main/config/setuptable/cabinets/edit"
+  }]
+},{
+  "page": "gravity",
+  "details": [{
+    "label": "Gravity",
+    "url": "/main/config/setuptable/gravity/search"
+  }, {
+    "label": "Gravity",
+    "url": "/main/config/setuptable/gravity/add"
+  }, {
+    "label": "Gravity",
+    "url": "/main/config/setuptable/gravity/edit"
+  }]
+},{
+  "page": "devtype1",
+  "details": [{
+    "label": "Dev Type1",
+    "url": "/main/config/setuptable/devtype1/search"
+  }, {
+    "label": "Dev Type1",
+    "url": "/main/config/setuptable/devtype1/add"
+  }, {
+    "label": "Dev Type1",
+    "url": "/main/config/setuptable/devtype1/edit"
+  }]
+},{
+  "page": "devtype2",
+  "details": [{
+    "label": "Dev Type2/class",
+    "url": "/main/config/setuptable/devtype2/search"
+  }, {
+    "label": "Dev Type2/class",
+    "url": "/main/config/setuptable/devtype2/add"
+  }, {
+    "label": "Dev Type2/class",
+    "url": "/main/config/setuptable/devtype2/edit"
+  }]
+},{
+  "page": "market",
+  "details": [{
+    "label": "Market",
+    "url": "/main/config/setuptable/market/search"
+  }, {
+    "label": "Market",
+    "url": "/main/config/setuptable/market/add"
+  }, {
+    "label": "Market",
+    "url": "/main/config/setuptable/market/edit"
+  }]
+},{
+  "page": "quarter",
+  "details": [{
+    "label": "Quarter",
+    "url": "/main/config/setuptable/quarter/search"
+  }, {
+    "label": "Quarter",
+    "url": "/main/config/setuptable/quarter/add"
+  }, {
+    "label": "Quarter",
+    "url": "/main/config/setuptable/quarter/edit"
+  }]
+},{
+  "page": "expinreq",
+  "details": [{
+    "label": "Manage PIN",
+    "url": "/main/expinreq/pinrequest"
+  }]
+}, {
+  "page": "pinrequest",
+  "details": [{
+    "label": "Extra PIN Request",
+    "url": "/main/expinreq/pinrequest"
+  }]
+}]

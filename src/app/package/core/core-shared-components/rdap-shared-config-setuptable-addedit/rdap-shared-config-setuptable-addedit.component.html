@@ -1,0 +1,60 @@
+<mat-card style="margin-bottom:2%;">
+    <mat-card-content>
+        <div class="col-lg-12">
+            <form *ngIf="searchform" action="" [formGroup]="searchform" (ngSubmit)="submit()">
+                <div class="row">
+                    <div class="col-lg-4 form-group" *ngFor="let item of formdata;">
+                        <mat-form-field *ngIf="item.type =='text'">
+                            <mat-label>
+                                {{item.label}}
+                                <span class="compulsary-mark"></span>
+                            </mat-label>
+                            <input id='{{item.controlname}}'  type="text" matInput name='{{item.controlname}}'
+                                formControlName="{{item.formcontrolname}}" [disabled]="false" />
+                                <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
+                                    {{item.label}} required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field *ngIf="item.type =='textarea'">
+                            <mat-label>
+                                {{item.label}}
+                                <span class="compulsary-mark"></span>
+                            </mat-label>
+                            <textarea id='{{item.controlname}}'  matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" name="{{item.controlname}}"
+                                formControlName="{{item.formcontrolname}}" placeholder="{{item.placeholder}}"
+                                ></textarea>
+                                <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
+                                    {{item.label}} required</mat-error>
+                        </mat-form-field>
+                        <ng-select id='{{item.controlname}}' *ngIf="item.type =='select'" [items]="item.apidata"
+                            placeholder="{{item.placeholder}}" bindLabel="{{item.bindname}}"
+                            formControlName="{{item.formcontrolname}}" [clearable]="item.clearable"
+                            [virtualScroll]="item.virtualScroll" [multiple]="item.multiple" appendTo="body"
+                            required>
+                            <ng-template ng-option-tmp let-item="item">
+                                {{item.name}}
+                            </ng-template>
+                        </ng-select>
+                        <mat-checkbox id='{{item.controlname}}' *ngIf="item.type =='checkbox'" labelPosition="after">
+                            {{item.label}}
+                        </mat-checkbox>
+                        <label style="background-color: rgb(161, 161, 161);color: rgb(0, 0, 0);" id='{{item.innercontrol[0].controlname}}' *ngIf="item.innercontrol && item.innercontrol[0].type =='label'">
+                            {{item.innercontrol[0].label}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: left;" *ngIf="searchform">
+        <button mat-raised-button
+            (click)="submit()" 
+            [disabled]="!searchform.valid" 
+            [ngClass]="{'errorbtn':!searchform.valid, 'successbtn': searchform.valid}"
+            *ngIf="((transactionFlag=='A')||(transactionFlag=='E'))">Save</button>
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white"
+        >Cancel</button>
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white"
+        *ngIf="transactionFlag=='D'"
+        >Delete</button>
+    </mat-card-actions>
+</mat-card>

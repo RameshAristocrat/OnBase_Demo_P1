@@ -1,0 +1,192 @@
+@import "../scss/fonts.scss";
+
+.fullblock {
+  width: 100%;
+  float: left;
+}
+
+.cloudlex {
+  .printoption {
+    float: right;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .printicon {
+    background-image: url(~/assets/images/sprite.svg);
+    float: left;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: 0 -821px;
+
+    &:hover {
+      background-position: 0 -852px;
+    }
+  }
+
+  .mat-option {
+    font-family: "GothamRounded-Book";
+  }
+
+  // .mat-option-text {
+  //   font-size: 14px;
+  //   color: $gray;
+  //   font-family: "GothamRounded-Book";
+  // }
+
+  .eventslistoptions {
+    .mat-tab-label {
+      .mat-tab-label-content {
+        display: block;
+      }
+    }
+  }
+
+  .eventdropdown {
+    .mat-select-value {
+      font-family: "GothamRounded-Medium";
+      font-size: 16px;
+      color: $gray;
+    }
+
+    // .mat-option-text {
+    //   font-size: 14px;
+    //   color: $gray;
+    //   font-family: "GothamRounded-Book";
+    // }
+  }
+
+  .filteroptions {
+    border-bottom: 1px solid #d3d9de;
+    margin-bottom: 10px;
+  }
+
+  .labelcount {
+    font-family: "GothamRounded-Light";
+    font-size: 22px;
+    font-weight: normal;
+    color: $black;
+  }
+
+  .labelinfo {
+    padding-bottom: 10px;
+    color: $black;
+  }
+
+  .intakedashboard {
+    .mat-ripple.ng-star-inserted {
+      margin-top: 0;
+    }
+
+    .mat-tab-label {
+      color: #2a83b1;
+      opacity: 1;
+      padding: 12px 10px 5px 10px;
+      min-width: 80px;
+      font-size: 16px;
+      font-family: "GothamRounded-Book";
+      font-weight: normal;
+      height: 54px;
+      .mat-tab-label-content {
+        a {
+          font-size: 16px;
+          color: $black;
+          font-family: "GothamRounded-Medium";
+        }
+      }
+
+      &.mat-tab-label-active {
+        color: $black;
+        font-weight: bold;
+
+        &:hover {
+          color: $black;
+        }
+
+        .labelcount {
+          font-family: "GothamRounded-Book";
+        }
+
+        .labelinfo {
+          font-family: "GothamRounded-Medium";
+        }
+
+        .mat-tab-label-content {
+          a {
+            font-size: 16px;
+            color: $activeblue;
+
+            &:hover {
+              color: $activeblue;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        color: $activeblue;
+      }
+    }
+
+    .intakecontent {
+      .mat-tab-label {
+        color: $black;
+        opacity: 1;
+        padding: 10px;
+        min-width: 80px;
+        font-size: 14px;
+        font-family: "GothamRounded-Book";
+        font-weight: normal;
+
+        &.mat-tab-label-active {
+          color: $activeblue;
+          font-weight: bold;
+
+          &:hover {
+            color: $black;
+          }
+        }
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .mat-tab-group {
+      &.mat-primary {
+        .mat-ink-bar {
+          background: $activeblue;
+        }
+      }
+    }
+
+    .cloudlex-tab-content {
+      .mat-tab-label {
+        font-weight: normal;
+        font-size: 14px;
+        flex: auto;
+
+        .matter-count {
+          font-size: 22px;
+          display: block;
+          font-family: "GothamRounded-Light";
+        }
+
+        &.mat-tab-label-active {
+          color: $black;
+          font-weight: bold;
+        }
+      }
+
+      .mat-tab-list {
+        padding: 10px 0;
+      }
+
+      .mat-tab-label-content {
+        display: block;
+      }
+    }
+  }
+}

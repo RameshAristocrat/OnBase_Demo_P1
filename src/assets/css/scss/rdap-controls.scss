@@ -1,0 +1,550 @@
+@import "./cloudlex-variables.scss";
+@import "./mixins.scss";
+
+// mat input field
+.mat-form-field {
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      .mat-form-field-prefix {
+        .dollar-icon {
+          font-size: 15px;
+          color: $black;
+          font-family: "GothamRounded-Book";
+          position: relative;
+          bottom: 0px;
+        }
+      }
+      .mat-form-field-suffix {
+        .mat-datepicker-toggle-active {
+          color: $bluegray;
+        }
+      }
+      .mat-form-field-infix {
+        .mat-form-field-label-wrapper {
+          top: -0.5em;
+          padding-top: 0.5em;
+          .mat-form-field-label.mat-form-field-empty {
+            @include fontBookBold;
+          }
+          .mat-form-field-label:not(.mat-empty) {
+            @include fontBookBold;
+            font-weight: 100;
+          }
+        }
+        .mat-select {
+          .mat-select-trigger {
+            .mat-select-value {
+              .mat-select-value-text {
+                font-family: "GothamRounded-Book";
+                font-size: 13.44px;
+                color: $gray;
+              }
+            }
+          }
+        }
+        textarea.mat-input-element {
+          height: 60px;
+          overflow-y: auto;
+          &::-webkit-scrollbar {
+            width: 2px;
+            background-color: $bordergray;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: $scrolbarcolor;
+          }
+        }
+        input {
+          height: 28px !important;
+          margin-bottom: -7px;
+        }
+      }
+    }
+  }
+  &.mat-focused {
+    .mat-form-field-infix {
+      .mat-form-field-label-wrapper {
+        .mat-form-field-label.mat-form-field-empty {
+          @include fontBookBold;
+        }
+      }
+    }
+    .mat-form-field-underline {
+      .mat-form-field-ripple {
+        background-color: $bluegray;
+        height: 1px;
+      }
+    }
+    .mat-form-field-outline-thick {
+      color: $bluegray;
+    }
+  }
+  &.mat-form-field-disabled {
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        .mat-form-field-infix {
+          background-color: transparent !important;
+          cursor: not-allowed;
+          .mat-form-field-label.mat-form-field-empty {
+            color: rgba(0, 0, 0, 0.65) !important;
+          }
+          .mat-form-field-prefix {
+            .dollar-icon {
+              color: rgba(0, 0, 0, 0.65) !important;
+            }
+          }
+          input {
+            background-color: $datelinebg;
+          }
+        }
+      }
+      .mat-form-field-underline {
+        background-image: linear-gradient(
+          to right,
+          black 0,
+          rgba(0, 0, 0, 0.42) 33%,
+          #c2c7cc 0
+        ) !important;
+        background-size: 1px 100% !important;
+        background-repeat: repeat-x !important;
+      }
+    }
+  }
+  &.mat-form-field-appearance-outline {
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        .mat-form-field-infix {
+          background-color: transparent !important;
+        }
+        &:hover {
+          .mat-form-field-outline-thick {
+            color: $bluegray;
+          }
+        }
+      }
+    }
+    .mat-form-field-outline-thick {
+      .mat-form-field-outline-end,
+      .mat-form-field-outline-gap,
+      .mat-form-field-outline-start {
+        border-width: 1px !important;
+      }
+    }
+  }
+  &.mat-form-field-can-float {
+    .mat-form-field-wrapper {
+      .mat-form-field-flex {
+        .mat-form-field-prefix {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.mat-error {
+  float: right;
+  font-size: 11px;
+}
+
+.mat-form-field-outline-gap {
+  width: 74px !important;
+}
+// Mat Required Caret-mark-color
+.mat-placeholder-required.mat-form-field-required-marker {
+  color: #f44336 !important;
+}
+
+//mat-radio Button
+.mat-radio-button {
+  .mat-radio-label-content {
+    font-size: 13.44px;
+    font-family: "GothamRounded-Book";
+    color: $black;
+  }
+  &.mat-radio-disabled {
+    .mat-radio-label-content {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Ng select Common code
+.ng-select {
+  .ng-select-container {
+    .ng-value-container {
+      .ng-placeholder {
+        @include fontBookBold;
+        color: rgba(0, 0, 0, 1) !important;
+      }
+    }
+    .ng-input {
+      bottom: 0 !important;
+      input {
+        height: 28px;
+      }
+    }
+    .ng-value {
+      position: absolute;
+      top: 28px;
+      font-size: 13px;
+      width: 80%;
+      text-align: left;
+      z-index: 10000;
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  &.ng-select-focused {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          transform: translateY(-0.8em) scale(0.8) perspective(100px)
+            translateZ(0.001px) !important;
+          font-weight: 100;
+        }
+      }
+      &:after {
+        border-color: $bluegray !important;
+        border-width: 1px !important;
+      }
+    }
+  }
+  &.ng-untouched,
+  &.ng-touched,
+  &.ng-untouched[ng-reflect-model=""],
+  &.ng-touched[ng-reflect-model=""] {
+    .ng-placeholder {
+      transform: translateY(0.6em) scale(1) perspective(100px)
+        translateZ(0.001px);
+    }
+  }
+  &.ng-touched:not([ng-reflect-model=""]),
+  &.ng-untouched:not([ng-reflect-model=""]) {
+    .ng-has-value {
+      .ng-placeholder {
+        font-size: 13.44px;
+        transform: translateY(-0.8em) scale(0.8) perspective(100px)
+          translateZ(0.001px);
+        font-weight: 100;
+        color: $black;
+      }
+    }
+  }
+  &.ng-select-opened,
+  &.ng-select-focused {
+    .ng-placeholder {
+      font-size: 13.44px;
+      transform: translateY(-0.8em) scale(0.8) perspective(100px)
+        translateZ(0.001px);
+      font-weight: 100;
+      color: $black;
+    }
+  }
+
+  &[ng-reflect-required="true"] {
+    .ng-placeholder {
+      &:after {
+        color: red;
+        content: "*";
+        font-size: 15px;
+        margin-left: 3px;
+        clear: both;
+        position: absolute;
+        top: -2px;
+      }
+    }
+  }
+  &[ng-reflect-typeahead] {
+    .ng-arrow-wrapper {
+      display: none;
+    }
+  }
+  &.ng-select-multiple {
+    .ng-select-container {
+      max-height: 100px !important;
+      .ng-arrow-wrapper {
+        top: 6px;
+      }
+      .ng-clear-wrapper {
+        top: 8px;
+      }
+      .ng-value-container {
+        overflow-y: auto;
+        max-height: 100px;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 2px;
+          background-color: $bordergray;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $scrolbarcolor;
+        }
+        .ng-value {
+          border: 1px solid $lightgray;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          background-color: $inputvalue !important;
+          color: $black !important;
+          margin-left: 4px !important;
+          position: relative;
+          top: 0;
+          font-size: 13px;
+          width: auto;
+          text-align: left;
+          z-index: 10000;
+          padding: 1px 5px !important;
+          .ng-value-icon {
+            color: $black !important;
+          }
+          .ng-value-label {
+            font-size: 13.44px !important;
+            word-break: break-word;
+            white-space: break-spaces;
+          }
+        }
+      }
+      .ng-input {
+        bottom: 0 !important;
+        input {
+          height: auto;
+        }
+      }
+    }
+    &.ng-touched:not([ng-reflect-model=""]),
+    &.ng-untouched:not([ng-reflect-model=""]) {
+      .ng-has-value {
+        .ng-placeholder {
+          font-size: 13.44px;
+          transform: translateY(-1.3em) scale(0.8) perspective(100px)
+            translateZ(0.001px) !important;
+          color: $black;
+        }
+      }
+    }
+    &.ng-select-opened,
+    &.ng-select-focused {
+      .ng-placeholder {
+        transform: translateY(-1.3em) scale(0.8) perspective(100px)
+          translateZ(0.001px) !important;
+        @include fontBookBold;
+      }
+    }
+  }
+  .ng-optgroup {
+    border-top: 1px solid $lightgray;
+    font-weight: normal;
+    color: $black;
+  }
+  .ng-dropdown-panel {
+    z-index: 1000000;
+    .ng-dropdown-panel-items {
+      max-height: 200px;
+      .ng-optgroup.ng-option-disabled {
+        color: $black;
+        font-weight: normal;
+        font-size: 13.44px;
+        text-align: left;
+        padding: 5px 8px !important;
+      }
+      .ng-option {
+        line-height: 19px !important;
+        min-height: 8px !important;
+        white-space: initial;
+        word-break: break-word;
+        white-space: pre-line;
+        font-size: 13.4px;
+        font-weight: 400;
+        padding: 7px 10px !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+        .highlighted {
+          text-decoration: none;
+          color: $black;
+          font-weight: bold;
+          font-family: "GothamRounded-Bold";
+        }
+        p {
+          white-space: pre-line;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: $black;
+        }
+        .ng-option-label {
+          font-size: 13.44px;
+        }
+        &.ng-option-disabled {
+          display: none;
+        }
+        &.ng-option-selected {
+          color: $sharepopuptxt;
+          background-color: $sharepopupautobg;
+        }
+      }
+    }
+  }
+  &.ng-select-disabled {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          z-index: 1000;
+          color: rgba(0, 0, 0, 1) !important;
+        }
+        .ng-value {
+          .ng-value-label {
+            color: rgba(0, 0, 0, 1) !important;
+          }
+        }
+        .ng-input {
+          background-color: $datelinebg;
+        }
+      }
+      &::after {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+// sidebar select box with search content
+.searh-select-box {
+  margin-top: -12px;
+  padding-bottom: 5px;
+  &.ng-select {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          color: $grydark !important;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  &.ng-select.ng-select-opened {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          display: none;
+        }
+      }
+    }
+  }
+  &.ng-select {
+    .ng-has-value {
+      .ng-value-container {
+        .ng-placeholder {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+// mat-checkbox
+.mat-checkbox {
+  .mat-checkbox-layout {
+    .mat-checkbox-inner-container {
+      width: 17px;
+      height: 17px;
+      margin-right: 7px;
+      .mat-checkbox-frame {
+        border: 1px solid $gray !important;
+        opacity: 0.3;
+      }
+    }
+    .mat-checkbox-label {
+      font-size: 13.44px;
+      font-family: "GothamRounded-Book";
+      color: $black;
+      line-height: 19px;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  z-index: 99;
+  height: 15px;
+  width: 15px;
+  margin: 5px 8px 0px 0px;
+  box-shadow: none;
+  vertical-align: sub;
+  border: 1px solid $gray !important;
+  &:focus {
+    border-color: transparent;
+    outline: none;
+  }
+}
+
+.cdk-overlay-pane {
+  .mat-select-panel-wrap {
+    .mat-select-panel {
+      .mat-option {
+        height: 32px;
+        padding: 7px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        .mat-option-text {
+          font-size: 13.4px;
+          color: $black;
+          font-family: "GothamRounded-Book";
+        }
+      }
+    }
+  }
+  .mat-autocomplete-panel {
+    .mat-option {
+      height: 28px;
+      padding: 5px 15px;
+      .mat-option-text {
+        font-size: 13.4px;
+        color: $black;
+        font-family: "GothamRounded-Book";
+      }
+    }
+  }
+}
+.mat-datepicker-popup {
+  .mat-datepicker-content {
+    .mat-calendar {
+      .mat-calendar-content {
+        .mat-calendar-table {
+          .mat-calendar-body {
+            .mat-calendar-body-today:not(.mat-calendar-body-selected) {
+              border-color: $bluegray;
+            }
+            .mat-calendar-body-cell-content.mat-calendar-body-selected {
+              background-color: $bluegray;
+              color: $white-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-title {
+  font-weight: 400;
+  color: $black;
+  margin: 0;
+  line-height: 27px;
+  vertical-align: middle;
+  font-family: "GothamRounded-Medium";
+  float: left;
+  font-size: 1.1em !important;
+  padding: 0;
+}
+
+.input-group {
+  display: block !important;
+}
+.time-picker-validation,
+.custom-validation,
+.editor-custom-validation {
+  position: sticky;
+  margin-top: -15px;
+  font-size: 12px;
+  color: $textwarning;
+  float: right;
+}

@@ -1,0 +1,365 @@
+/*Scrollbar*/
+
+.show-nav ::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar,
+.contact-card li::-webkit-scrollbar,
+.dashboard-tasks-due::-webkit-scrollbar,
+.slim-scroll::-webkit-scrollbar,
+.dropdown-menu::-webkit-scrollbar,
+tbody::-webkit-scrollbar {
+  width: 12px;
+  height: 15px;
+}
+
+.show-nav ::-webkit-scrollbar-corner,
+.modal-body::-webkit-scrollbar-corner,
+.contact-card li::-webkit-scrollbar-corner,
+.dashboard-tasks-due::-webkit-scrollbar-corner,
+.slim-scroll::-webkit-scrollbar-corner,
+.dropdown-menu::-webkit-scrollbar-corner,
+tbody::-webkit-scrollbar-corner {
+  background-image: url(/assets/images/scroll/FguQn.png);
+  background-repeat: no-repeat;
+}
+
+.show-nav ::-webkit-resizer,
+.modal-body::-webkit-resizer,
+.contact-card li::-webkit-resizer,
+.dashboard-tasks-due::-webkit-resizer,
+.slim-scroll::-webkit-resizer,
+.dropdown-menu::-webkit-resizer,
+tbody::-webkit-resizer {
+  background-image: url(/assets/images/scroll/aKKDY.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.show-nav ::-webkit-scrollbar-button:start,
+.modal-body::-webkit-scrollbar-button:start,
+.contact-card li::-webkit-scrollbar-button:start,
+.dashboard-tasks-due::-webkit-scrollbar-button:start,
+.slim-scroll::-webkit-scrollbar-button:start,
+.dropdown-menu::-webkit-scrollbar-button:start,
+tbody::-webkit-scrollbar-button:start {
+  display: none;
+}
+
+.show-nav ::-webkit-scrollbar-button:end,
+.modal-body::-webkit-scrollbar-button:end,
+.contact-card li::-webkit-scrollbar-button:end,
+.dropdown-menu::-webkit-scrollbar-button:end,
+.slim-scroll::-webkit-scrollbar-button:end,
+.dashboard-tasks-due::-webkit-scrollbar-button,
+tbody::-webkit-scrollbar-button:end {
+  display: block;
+}
+
+.show-nav ::-webkit-scrollbar:horizontal,
+.modal-body::-webkit-scrollbar:horizontal,
+.dropdown-menu::-webkit-scrollbar:horizontal,
+.slim-scroll::-webkit-scrollbar:horizontal,
+.dashboard-tasks-due::-webkit-scrollbar:horizontal,
+tbody::-webkit-scrollbar:horizontal {
+  -webkit-border-image: url(/assets/images/scroll/NQ2K6.png) 0 2 0 2;
+  border-color: transparent;
+  border-width: 0 2px;
+  background-image: url(/assets/images/scroll/8xDbU.png);
+  background-repeat: repeat-x;
+}
+
+.show-nav ::-webkit-scrollbar:horizontal:corner-present,
+.modal-body::-webkit-scrollbar:horizontal:corner-present,
+.dropdown-menu::-webkit-scrollbar:horizontal:corner-present,
+.slim-scroll::-webkit-scrollbar:horizontal:corner-present,
+.dashboard-tasks-due::-webkit-scrollbar:horizontal:corner-present,
+tbody::-webkit-scrollbar:horizontal:corner-present {
+  border-right-width: 0;
+}
+
+.show-nav ::-webkit-scrollbar-thumb:horizontal,
+.modal-body::-webkit-scrollbar-thumb:horizontal,
+.dropdown-menu::-webkit-scrollbar-thumb:horizontal,
+.slim-scroll::-webkit-scrollbar-thumb:horizontal,
+.dashboard-tasks-due::-webkit-scrollbar-thumb:horizontal,
+tbody::-webkit-scrollbar-thumb:horizontal {
+  -webkit-border-image: url(/assets/images/scroll/YQRD7.png) 0 15 0 15;
+  border-color: transparent;
+  border-width: 0 15px;
+  min-width: 20px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:horizontal:start,
+.modal-body::-webkit-scrollbar-track-piece:horizontal:start,
+.dropdown-menu::-webkit-scrollbar-track-piece:horizontal:start,
+.slim-scroll::-webkit-scrollbar-track-piece:horizontal:start,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:horizontal:start,
+tbody::-webkit-scrollbar-track-piece:horizontal:start {
+  margin-left: 6px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:horizontal:end,
+.modal-body::-webkit-scrollbar-track-piece:horizontal:end,
+.dropdown-menu::-webkit-scrollbar-track-piece:horizontal:end,
+.slim-scroll::-webkit-scrollbar-track-piece:horizontal:end,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:horizontal:end,
+tbody::-webkit-scrollbar-track-piece:horizontal:end {
+  margin-right: -6px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:horizontal:decrement,
+.modal-body::-webkit-scrollbar-track-piece:horizontal:decrement,
+.dropdown-menu::-webkit-scrollbar-track-piece:horizontal:decrement,
+.slim-scroll::-webkit-scrollbar-track-piece:horizontal:decrement,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:horizontal:decrement,
+tbody::-webkit-scrollbar-track-piece:horizontal:decrement {
+  -webkit-border-image: url(/assets/images/scroll/p9yMk.png) 0 15 0 15;
+  border-color: transparent;
+  border-width: 0 0 0 15px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:horizontal:increment,
+.modal-body::-webkit-scrollbar-track-piece:horizontal:increment,
+.dropdown-menu::-webkit-scrollbar-track-piece:horizontal:increment,
+.slim-scroll::-webkit-scrollbar-track-piece:horizontal:increment,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:horizontal:increment,
+tbody::-webkit-scrollbar-track-piece:horizontal:increment {
+  -webkit-border-image: url(/assets/images/scroll/p9yMk.png) 0 15 0 15;
+  border-color: transparent;
+  border-width: 0 15px 0 0;
+}
+
+.show-nav ::-webkit-scrollbar-button:horizontal,
+.modal-body ::-webkit-scrollbar-button:horizontal,
+.dropdown-menu ::-webkit-scrollbar-button:horizontal,
+.slim-scroll ::-webkit-scrollbar-button:horizontal,
+.dashboard-tasks-due::-webkit-scrollbar-button:horizontal,
+tbody::-webkit-scrollbar-button:horizontal {
+  width: 21px;
+  -webkit-border-image: url(/assets/images/scroll/NQ2K6.png) 0 2 0 2;
+  border-color: transparent;
+  border-width: 0 2px;
+}
+
+.show-nav ::-webkit-scrollbar-button:horizontal:decrement,
+.modal-body::-webkit-scrollbar-button:horizontal:decrement,
+.dropdown-menu::-webkit-scrollbar-button:horizontal:decrement,
+.slim-scroll::-webkit-scrollbar-button:horizontal:decrement,
+.dashboard-tasks-due::-webkit-scrollbar-button:horizontal:decrement,
+tbody::-webkit-scrollbar-button:horizontal:decrement {
+  background-image: url(/assets/images/scroll/dGOKL.png),
+    url(/assets/images/scroll/8xDbU.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 7px 4px, 0 0;
+}
+
+.show-nav ::-webkit-scrollbar-button:horizontal:decrement:active,
+.modal-body::-webkit-scrollbar-button:horizontal:decrement:active,
+.dropdown-menu::-webkit-scrollbar-button:horizontal:decrement:active,
+.slim-scroll::-webkit-scrollbar-button:horizontal:decrement:active,
+.dashboard-tasks-due::-webkit-scrollbar-button:horizontal:decrement:active,
+tbody::-webkit-scrollbar-button:horizontal:decrement:active {
+  -webkit-border-image: url(/assets/images/scroll/gT5BM.png) 0 2 0 2;
+  background-image: url(/assets/images/scroll/dGOKL.png),
+    url(/assets/images/scroll/RDf8L.png);
+}
+
+.show-nav ::-webkit-scrollbar-button:horizontal:increment,
+.modal-body::-webkit-scrollbar-button:horizontal:increment,
+.dropdown-menu::-webkit-scrollbar-button:horizontal:increment,
+.slim-scroll::-webkit-scrollbar-button:horizontal:increment,
+.dashboard-tasks-due::-webkit-scrollbar-button:horizontal:increment,
+tbody::-webkit-scrollbar-button:horizontal:increment {
+  background-image: url(/assets/images/scroll/5rJr5.png),
+    url(/assets/images/scroll/8xDbU.png);
+  background-repeat: no-repeat, repeat-x;
+  width: 16px;
+  border-left-width: 0;
+  background-position: 3px 4px, 0 0;
+}
+
+::-webkit-scrollbar-button:horizontal:increment:active {
+  -webkit-border-image: url(/assets/images/scroll/gT5BM.png) 0 2 0 2;
+  background-image: url(/assets/images/scroll/5rJr5.png),
+    url(/assets/images/scroll/RDf8L.png);
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment:corner-present {
+  border-right-width: 0;
+  width: 15px;
+}
+
+.show-nav ::-webkit-scrollbar:vertical,
+.contact-card li::-webkit-scrollbar:vertical,
+.modal-body::-webkit-scrollbar:vertical,
+.dropdown-menu::-webkit-scrollbar:vertical,
+.slim-scroll::-webkit-scrollbar:vertical,
+.dashboard-tasks-due::-webkit-scrollbar:vertical,
+tbody::-webkit-scrollbar:vertical {
+  -webkit-border-image: url(/assets/images/scroll/NdaTT.png) 2 0 2 0;
+  border-color: transparent;
+  border-width: 0px 0;
+  background-image: url(/assets/images/scroll/p7j9a.png);
+  background-repeat: repeat-y;
+  border-radius: 8px;
+}
+
+.show-nav ::-webkit-scrollbar:vertical:corner-present,
+.contact-card li::-webkit-scrollbar:vertical:corner-present,
+.modal-body::-webkit-scrollbar:vertical:corner-present,
+.dropdown-menu::-webkit-scrollbar:vertical:corner-present,
+.slim-scroll::-webkit-scrollbar:vertical:corner-present,
+.dashboard-tasks-due::-webkit-scrollbar:vertical:corner-present,
+tbody::-webkit-scrollbar:vertical:corner-present {
+  border-bottom-width: 0;
+}
+
+.show-nav ::-webkit-scrollbar-thumb:vertical,
+.contact-card li::-webkit-scrollbar-thumb:vertical,
+.modal-body::-webkit-scrollbar-thumb:vertical,
+.dropdown-menu::-webkit-scrollbar-thumb:vertical,
+.slim-scroll::-webkit-scrollbar-thumb:vertical,
+.dashboard-tasks-due::-webkit-scrollbar-thumb:vertical,
+tbody::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-image: url(/assets/images/scroll/rPEsZ.png) 15 0 15 0;
+  border-color: transparent;
+  border-width: 12px 0;
+  min-height: 20px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:vertical:start,
+.contact-card li::-webkit-scrollbar-track-piece:vertical:start,
+.modal-body::-webkit-scrollbar-track-piece:vertical:start,
+.dropdown-menu::-webkit-scrollbar-track-piece:vertical:start,
+.slim-scroll::-webkit-scrollbar-track-piece:vertical:start,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:vertical:start,
+tbody::-webkit-scrollbar-track-piece:vertical:start {
+  margin-top: 2px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:vertical:end,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:end,
+.modal-body::-webkit-scrollbar-track-piece:vertical:end,
+.dropdown-menu::-webkit-scrollbar-track-piece:vertical:end,
+.slim-scroll::-webkit-scrollbar-track-piece:vertical:end,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:vertical:end,
+tbody::-webkit-scrollbar-track-piece:vertical:end {
+  margin-bottom: 2px;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:vertical:decrement,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:decrement,
+.modal-body::-webkit-scrollbar-track-piece:vertical:decrement,
+.dropdown-menu::-webkit-scrollbar-track-piece:vertical:decrement,
+.slim-scroll::-webkit-scrollbar-track-piece:vertical:decrement,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:vertical:decrement,
+tbody::-webkit-scrollbar-track-piece:vertical:decrement {
+  -webkit-border-image: url(/assets/images/scroll/Rb6ru.png) 15 0 15 0;
+  border-color: transparent;
+  border-width: 15px 0 0 0;
+}
+
+.dashboard-tasks-due::-webkit-scrollbar-track {
+  background: transparent;
+  overflow: overlay;
+}
+
+.show-nav ::-webkit-scrollbar-track-piece:vertical:increment,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-track-piece:vertical:increment,
+.dropdown-menu::-webkit-scrollbar-track-piece:vertical:increment,
+.slim-scroll::-webkit-scrollbar-track-piece:vertical:increment,
+.dashboard-tasks-due::-webkit-scrollbar-track-piece:vertical:increment,
+tbody::-webkit-scrollbar-track-piece:vertical:increment {
+  -webkit-border-image: url(/assets/images/scroll/Rb6ru.png) 15 0 15 0;
+  border-color: transparent;
+  border-width: 0 0 15px 0;
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical,
+.dropdown-menu::-webkit-scrollbar-button:vertical,
+.slim-scroll::-webkit-scrollbar-button:vertical,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical,
+tbody::-webkit-scrollbar-button:vertical {
+  height: 21px;
+  -webkit-border-image: url(/assets/images/scroll/NdaTT.png) 2 0 2 0;
+  border-color: transparent;
+  border-width: 2px 0;
+  display: none;
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical:decrement,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical:decrement,
+.dropdown-menu::-webkit-scrollbar-button:vertical:decrement,
+.slim-scroll::-webkit-scrollbar-button:vertical:decrement,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical:decrement,
+tbody::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url(/assets/images/scroll/KQvwk.png),
+    url(/assets/images/scroll/p7j9a.png);
+  background-repeat: no-repeat, repeat-y;
+  background-position: 4px 7px, 0 0;
+  display: none;
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical:decrement:active,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical:decrement:active,
+.dropdown-menu::-webkit-scrollbar-button:vertical:decrement:active,
+.slim-scroll::-webkit-scrollbar-button:vertical:decrement:active,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical:decrement:active,
+tbody::-webkit-scrollbar-button:vertical:decrement:active {
+  -webkit-border-image: url(/assets/images/scroll/uW3TL.png) 2 0 2 0;
+  background-image: url(/assets/images/scroll/KQvwk.png?vertical-decrement-arrow.png),
+    url(/assets/images/scroll/puDsH.png);
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical:increment,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical:increment,
+.dropdown-menu::-webkit-scrollbar-button:vertical:increment,
+.slim-scroll::-webkit-scrollbar-button:vertical:increment,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical:increment,
+tbody::-webkit-scrollbar-button:vertical:increment {
+  background-image: url(/assets/images/scroll/UjkVR.png),
+    url(/assets/images/scroll/p7j9a.png);
+  background-repeat: no-repeat, repeat-y;
+  height: 16px;
+  border-top-width: 0;
+  background-position: 4px 5px, 0 0;
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical:increment:active,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical:increment:active,
+.dropdown-menu::-webkit-scrollbar-button:vertical:increment:active,
+.slim-scroll::-webkit-scrollbar-button:vertical:increment:active,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical:increment:active,
+tbody::-webkit-scrollbar-button:vertical:increment:active {
+  -webkit-border-image: url(/assets/images/scroll/uW3TL.png) 2 0 2 0;
+  background-image: url(/assets/images/scroll/UjkVR.png?vertical-increment-arrow.png),
+    url(/assets/images/scroll/puDsH.png);
+}
+
+.show-nav ::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+.contact-card li ::-webkit-scrollbar-track-piece:vertical:increment,
+.modal-body::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+.dropdown-menu::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+.slim-scroll::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+.dashboard-tasks-due::-webkit-scrollbar-button:vertical:end:increment:corner-present,
+tbody::-webkit-scrollbar-button:vertical:end:increment:corner-present {
+  border-bottom-width: 0;
+  height: 15px;
+}
+
+.show-nav ::-webkit-scrollbar:disabled,
+.modal-body::-webkit-scrollbar:disabled,
+.dropdown-menu::-webkit-scrollbar:disabled,
+.slim-scroll::-webkit-scrollbar:disabled,
+.dashboard-tasks-due::-webkit-scrollbar:disabled,
+tbody::-webkit-scrollbar:disabled {
+  background: red;
+  -webkit-border-image: none;
+  display: none;
+}

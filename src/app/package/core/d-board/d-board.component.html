@@ -1,0 +1,83 @@
+<div class="grid-container">
+  <app-rdap-shared-breadcrumb></app-rdap-shared-breadcrumb>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile  [colspan]="2" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            PIN Request
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content"><google-chart 
+            [type]="columnChartData.type" 
+            [data]="columnChartData.data" 
+            [columns]="columnChartData.columnNames" 
+            [options]="columnChartData.options" 
+            [width]="columnChartData.width"
+            [height]="columnChartData.height"></google-chart>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile  [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Change Request
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content"><google-chart 
+            [type]="pieChartData.type" 
+            [data]="pieChartData.data" 
+            [columns]="pieChartData.columnNames" 
+            [options]="pieChartData.options" 
+            [width]="pieChartData.width"
+            [height]="pieChartData.height"></google-chart>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile  [colspan]="1" [rowspan]="1">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            Delay Notification
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content"><google-chart 
+            [type]="chartData.type" 
+            [data]="chartData.data" 
+            [columns]="chartData.columnNames" 
+            [options]="chartData.options" 
+            [width]="chartData.width"
+            [height]="chartData.height"></google-chart>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  
+</div>
+
+
+

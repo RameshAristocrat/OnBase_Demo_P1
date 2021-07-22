@@ -1,0 +1,85 @@
+<div class="grid-container">
+  <!-- <h1 class="mat-h1">Extra Pin Request</h1> -->
+  <app-rdap-shared-breadcrumb></app-rdap-shared-breadcrumb>
+  <mat-card>
+    <mat-card-header>
+      <!-- <div mat-card-avatar></div> -->
+      <mat-card-title>Extra PIN Request</mat-card-title>
+      <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+    </mat-card-header>
+    <div mat-card-image></div>
+    <mat-card-content>
+      <mat-tab-group class="mat-elevation-z4" style="background-color: #ffff;border-radius: 4px;min-height:300px;">
+        <mat-tab class="mat-elevation-z4">
+          <ng-template mat-tab-label>
+            <span class="material-icons-outlined">
+              control_point
+            </span>
+            <span style="padding-left: 10%;">
+              PIN Details
+            </span>
+          </ng-template>
+          <app-rdap-extra-pin-request-details></app-rdap-extra-pin-request-details>
+        </mat-tab>
+
+        <mat-tab class="mat-elevation-z4">
+          <ng-template mat-tab-label>
+            <span class="material-icons-round">
+              link
+            </span>
+            <span style="padding-left: 10%;">
+              Linked PIN
+            </span>
+          </ng-template>
+          <app-rdap-extra-pin-request-linked-pin>
+
+          </app-rdap-extra-pin-request-linked-pin>
+        </mat-tab>
+
+        <mat-tab class="mat-elevation-z4">
+          <ng-template mat-tab-label>
+            <span class="material-icons-round">
+              sports_esports
+            </span>
+            <span style="padding-left: 10%;">
+              Game Title
+            </span>
+          </ng-template>
+          <app-rdap-extra-pin-request-game-title>
+
+          </app-rdap-extra-pin-request-game-title>
+        </mat-tab>
+
+        <mat-tab class="mat-elevation-z4">
+          <ng-template mat-tab-label>
+            <span class="material-icons-round">
+              manage_accounts
+            </span>
+            <span style="padding-left: 10%;">
+              Cabinet Type
+            </span>
+          </ng-template>
+          <app-rdap-extra-pin-request-cabinet-type></app-rdap-extra-pin-request-cabinet-type>
+        </mat-tab>
+
+        <mat-tab class="mat-elevation-z4">
+          <ng-template mat-tab-label>
+            <span class="material-icons-round">
+              account_tree
+            </span>
+            <span style="padding-left: 10%;">
+              Workflow
+            </span>
+          </ng-template>
+          <div class="col-lg-12" style="padding-left: 2%;padding-right:2%">
+            Content 5
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+    <mat-card-actions style="text-align: center;">
+      <button mat-raised-button style="width: 25%;background-color: #300c46;color:white">Extra PIN Request</button>
+      <button mat-raised-button style="width: 25%;background-color: #300c46;color:white">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

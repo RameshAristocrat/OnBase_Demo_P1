@@ -1,0 +1,237 @@
+@mixin footerstyles {
+  color: $white-color;
+  font-size: 16px;
+}
+
+@mixin tablefonts {
+  font-size: 13px;
+  color: $black;
+}
+
+@mixin logincolumn {
+  display: table;
+  height: 100vh;
+}
+
+@mixin input-placeholder {
+  font-size: 12px;
+  color: $placeholdercolor;
+}
+
+@mixin btn-primary {
+  background-color: $headerblue;
+  color: $white-color;
+  text-align: center;
+  border-radius: 5px;
+  height: 35px;
+  font-size: 13px;
+  border: none;
+  width: 100%;
+}
+
+@mixin inputfonts {
+  font-size: 13px;
+  color: $grydark;
+}
+
+@mixin formlabel {
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $black;
+  margin-bottom: 10px;
+}
+
+@mixin btn-default-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+@mixin dialogtitle {
+  font-size: 15px;
+  color: $black;
+  font-family: "GothamRounded-Book";
+  font-weight: bold;
+}
+
+@mixin dialogbody {
+  font-family: "GothamRounded-Book";
+  font-size: 13px;
+  color: $black;
+}
+
+@mixin snackbar-scucess {
+  background-color: $cloudlex-light-green;
+  border-color: $snackbar-scucessborder;
+  color: $cloudlex-success-green;
+  font-family: "GothamRounded-Book";
+}
+
+@mixin snackbar-error {
+  color: $snackbar-error-text;
+  border-color: $snackbar-error-text;
+  background-color: $snackbar-error;
+  font-family: "GothamRounded-Book";
+}
+
+@mixin strong {
+  font-family: "GothamRounded-medium";
+  color: $black;
+  font-weight: 900;
+}
+
+@mixin floatleft {
+  float: left;
+}
+
+@mixin floatright {
+  float: right;
+}
+
+@mixin bodyspacing {
+  padding: 0 20px 92px;
+  margin-right: 0;
+  width: calc(100% - 75px);
+}
+
+@mixin strong {
+  font-family: "GothamRounded-medium";
+  color: $black;
+  font-weight: 900;
+  font-size: 13px;
+}
+
+@mixin normaltext {
+  font-family: "GothamRounded-Book";
+  font-size: 13px;
+}
+
+@mixin fontbook-black {
+  font-family: "GothamRounded-book";
+  color: $black;
+}
+
+@mixin monthyearweek {
+  cursor: pointer;
+  text-decoration: none;
+  color: $tagclose;
+  font-size: 14px;
+  outline: 0;
+}
+
+@mixin mattabcontent {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+@mixin mattabanchorstyles {
+  border-bottom: none;
+  height: 48px;
+  font-weight: normal;
+  transition: font-size 2s;
+  padding: 15px;
+  font-family: "GothamRounded-book";
+}
+
+@mixin mattabanchorhoverstyles {
+  color: $white-color;
+  text-decoration: none;
+  border-bottom: 2px solid $white-color;
+  transition: all 0.5s;
+}
+
+@mixin globalfooter {
+  height: 50px;
+  z-index: 100;
+  overflow: auto;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+}
+
+@mixin cloudlexfooter {
+  padding: 0 40px;
+  background: $gragradient;
+  margin: 0 auto;
+  display: inline-block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  pointer-events: auto;
+}
+
+@mixin quickaccesspopup {
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 10px;
+}
+
+@mixin spriteimage {
+  width: 24px;
+  height: 24px;
+  background: url("/assets/images/sprite.svg");
+  display: inline-block;
+  cursor: pointer;
+}
+@mixin smallspriteimage {
+  width: 16px;
+  height: 16px;
+}
+@mixin lg-spriteimage {
+  width: 48px;
+  height: 48px;
+}
+@mixin contentfontsize {
+  font-size: 13.44px;
+}
+@mixin dropdownfonts {
+  font-size: 13px;
+  color: $black;
+  font-family: "GothamRounded-Book";
+}
+
+@mixin fontBookBold {
+  font-family: "GothamRounded-Book";
+  font-size: 13.44px;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 700;
+}
+
+@mixin fontBookBrand {
+  font-family: "GothamRounded-Book";
+  font-size: 13.44px;
+  color: $bluegray;
+  font-weight: 700;
+}
+
+@mixin sidebarPageTitle {
+  font-family: "GothamRounded-Medium";
+  font-size: 17.8752px;
+  font-weight: 400;
+  color: $black;
+}
+
+@mixin fontMediumBold {
+  font-family: "GothamRounded-Medium";
+  font-size: 13.44px;
+  color: $black;
+  font-weight: 900;
+}
+
+@mixin textEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

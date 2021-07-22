@@ -1,0 +1,41 @@
+.slds-align_absolute-center, .slds-align--absolute-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+}
+.footerLinkPipe[c-portalFooter_portalFooter] {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+a[c-portalFooter_portalFooter], a:hover[c-portalFooter_portalFooter] {
+    color: #fff;
+    fill: #fff;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.contentBg[c-portalFooter_portalFooter], .loginBg[c-portalFooter_portalFooter] {
+    color: #fff;
+    padding: 25px 0;
+}
+.slds-col, [class*=slds-col_padded], [class*=slds-col--padded] {
+    flex: 1 1 auto;
+}
+.footerImage[c-portalFooter_portalFooter] {
+    height: 2.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+img {
+    border: 0;
+}

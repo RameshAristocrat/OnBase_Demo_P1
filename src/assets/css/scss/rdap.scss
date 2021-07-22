@@ -1,0 +1,27 @@
+@import "./cloudlex-variables.scss";
+@import "./header.scss";
+@import "./cloudlex-common.scss";
+@import "./fonts.scss";
+@import "./buttons.scss";
+@import "./cloudlex-controls.scss";
+@import "./tabs.scss";
+@import "./datagrid.scss";
+@import "./mixins.scss";
+@import "./dialogbox.scss";
+@import "./footer.scss";
+@import "~@ng-select/ng-select/scss/material.theme.scss";
+@import "./login.scss";
+@import "./forgot-resetpassword.scss";
+@import "./whatsnewpopup.scss";
+@import "./intakeevents.scss";
+@import "./reports.scss";
+@import "./icons.scss";
+@import "./matter-details.scss";
+@import "../../../../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../../../../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+@import "./scrollbar.scss";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.ag-theme-alpine {
+  @include ag-theme-alpine();
+}

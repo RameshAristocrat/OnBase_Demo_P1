@@ -1,0 +1,192 @@
+[{
+  "pagename": "studio",
+  "data": [{
+    "studio": "OZG",
+    "description": "OZ Games"
+  },{
+    "studio": "STU9",
+    "description": "Studio 9 - IDC"
+  }]
+},
+{
+    "pagename": "market",
+    "data": [{
+      "market": "ACE - 3",
+      "description": "Ace (class 3)",
+      "pool": "OTHER",
+      "region": "EMBU",
+      "gravity": "SEC"
+      
+    },{
+        "market": "APPS",
+        "description": "Apps ipad/iphone",
+        "pool": "OTHER",
+        "region": "EMBU",
+        "gravity": "SEC"
+    },{
+        "market": "AU - NSW",
+        "description": "NSW",
+        "pool": "OTHER",
+        "region": "EMBU",
+        "gravity": "SEC"
+    }]
+  },
+  {
+    "pagename": "versionsearch",
+    "data": [{
+      "versionsetup": "STEPR",
+      "description": "Stepper"
+    },{
+      "versionsetup": "VIDEO",
+      "description": "Video"
+    }]
+  },
+  {
+    "pagename": "eppsearch",
+    "data": [{
+      "EPP Ref": "RPP2008",
+      "description": "RPP 2008"
+    },{
+      "EPP Ref": "RESERVE",
+      "description": "RESERVE"
+    }]
+  },
+  {
+    "pagename": "regionsearch",
+    "data": [{
+      "region": "GLOBAL",
+      "description": "global"
+    },{
+      "region": "EMEA",
+      "description": "EMEA"
+    }]
+  },
+  {
+    "pagename": "gravity",
+    "data": [{
+      "gravity": "PRIM",
+      "description": "Primary"
+    },{
+      "gravity": "SEC",
+      "description": "Secondary"
+    },{
+      "gravity": "TERT",
+      "description": "Tertiary"
+    }]
+  },
+    {
+      "pagename": "poolsearch",
+      "data": [{
+        "pool": "ACE",
+        "description": "ACE Markets"
+      },{
+        "pool": "ASP",
+        "description": "ASP Markets"
+      },{
+        "pool": "ASP XSER",
+        "description": "ASP & X Series(NSW)"
+      }]
+    },
+    {
+      "pagename": "channeltype",
+      "data": [{
+        "channel": "Class 2 Stepper",
+        "description": "Class 2 Stepper"
+      },{
+        "channel": "Class 2 Video",
+        "description": "Class 2 Video"
+      }]
+    },
+    {
+      "pagename": "channel",
+      "data": [{
+        "channeltype": "For Sale",
+        "description": "For Sale"
+      },{
+        "channeltype": "Gamming OPS",
+        "description": "Gamming OPS"
+      }]
+    },{
+      "pagename": "devefforttype",
+      "data": [{
+        "devtypeeffort": "COMPLEX",
+        "description": "a complex game development"
+      },{
+        "devtypeeffort": "MINDRANGE",
+        "description": "a mindrange game development"
+      },{
+        "devtypeeffort": "Simple",
+        "description": "a simple game development"
+      }]
+    },{
+      "pagename": "devcomplexity",
+      "data": [{
+        "devtypeeffort": "C0",
+        "description": "Complexity Zero"
+      },{
+        "devtypeeffort": "C1",
+        "description": "Complexity One"
+      },{
+        "devtypeeffort": "C6",
+        "description": "Complexity Six"
+      }]
+    },
+    {
+      "pagename": "cabinets",
+      "data": [{
+        "cabinets": "Helix",
+        "description": "Helix"
+      },{
+        "cabinets": "Helix X",
+        "description": "Helix X"
+      },{
+        "cabinets": "Helix XT",
+        "description": "Helix XT"
+      }]
+    },
+    {
+      "pagename": "devtype1",
+      "data": [{
+        "devtype1": "HARDW",
+        "description": "Engineering"
+      },{
+        "devtype1": "PROTO",
+        "description": "Prototype"
+      },{
+        "devtype1": "OTHR",
+        "description": "Other"
+      }]
+    },
+    {
+      "pagename": "devtype2",
+      "data": [{
+        "dev type2/Class": "A1",
+        "description": "Provide Content to ACE, Bally JV Etc",
+        "devtype1":"ASSET"
+      },{
+        "dev type2/Class": "A2",
+        "description": "Prototype",
+        "devtype1":"ASSET"
+      },{
+        "dev type2/Class": "OTHR",
+        "description": "Other",
+        "devtype1":"N/A"
+      }]
+    },
+    {
+      "pagename": "quarter",
+      "data": [{
+        "quarter": "Q1 OCT - DEC",
+        "description": "First Quarter"
+      },{
+        "quarter": "Q2 JAN - MAR",
+        "description": "Second Quarter"
+      },{
+        "quarter": "Q3 APR - JUN",
+        "description": "Third Quarter"
+      },{
+        "quarter": "Q4 JUL - SEP",
+        "description": "Fourth Quarter"
+      }]
+    }
+]

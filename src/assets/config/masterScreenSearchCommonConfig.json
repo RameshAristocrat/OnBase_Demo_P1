@@ -1,0 +1,529 @@
+[{
+  "master": [{
+    "studio": [{
+      "fieldprop": [{
+          "formcontrolname": "studioname",
+          "label": "Studio",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Studio",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "studiodesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "market": [{
+      "fieldprop": [{
+          "formcontrolname": "marketname",
+          "label": "Market",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Market",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "marketdesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "pool",
+          "label": "Pool",
+          "type": "select",
+          "api": "assets/config/pool.json",
+          "apidata": "",
+          "required": "required",
+          "placeholder": "Select Pool",
+          "action": "",
+          "pipe": "",
+          "bindname": "name",
+          "clearable": false,
+          "virtualScroll": true,
+          "multiple": false
+        },
+        {
+          "formcontrolname": "region",
+          "label": "Region",
+          "type": "select",
+          "api": "assets/config/region.json",
+          "apidata": "",
+          "required": "required",
+          "placeholder": "Select Region",
+          "action": "",
+          "pipe": "",
+          "bindname": "name",
+          "clearable": false,
+          "virtualScroll": true,
+          "multiple": false
+        },
+        {
+          "formcontrolname": "gravity",
+          "label": "Gravity",
+          "type": "select",
+          "api": "assets/config/gravity.json",
+          "apidata": "",
+          "required": "required",
+          "placeholder": "Select Gravity",
+          "action": "",
+          "pipe": "",
+          "bindname": "name",
+          "clearable": false,
+          "virtualScroll": true,
+          "multiple": false
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "version": [{
+      "fieldprop": [{
+          "formcontrolname": "versionname",
+          "label": "Version Setup",
+          "type": "text",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Version",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "versiondesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "EPP": [{
+      "fieldprop": [{
+          "formcontrolname": "eppname",
+          "label": "EPP Ref",
+          "type": "text",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter EPP Ref",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "eppdesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "gravity": [{
+      "fieldprop": [{
+          "formcontrolname": "gravityname",
+          "label": "Gravity",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Gravity",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "gravitydesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "region": [{
+      "fieldprop": [{
+          "formcontrolname": "regionname",
+          "label": "Region",
+          "type": "text",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Region",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "regiondesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "pool": [{
+      "fieldprop": [{
+          "formcontrolname": "poolname",
+          "label": "Pool",
+          "type": "text",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Pool",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "pooldesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "devtype1": [{
+      "fieldprop": [{
+          "formcontrolname": "devtype1name",
+          "label": "Dev Type1",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Dev Type1",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "devtype1desc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "devtype2": [{
+      "fieldprop": [{
+          "formcontrolname": "devtype2name",
+          "label": "Dev Type2 / Class",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Dev Type2",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "devtype2desc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "devtype1",
+          "label": "Dev Type 1",
+          "type": "select",
+          "api": "assets/config/pool.json",
+          "apidata": "",
+          "required": "required",
+          "placeholder": "Select Dev Type1",
+          "action": "",
+          "pipe": "",
+          "bindname": "name",
+          "clearable": false,
+          "virtualScroll": true,
+          "multiple": false
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "prodcat1": [{
+      "fieldprop": [{
+          "formcontrolname": "prodcat1name",
+          "label": "Prodcat1",
+          "type": "text",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Prodcat1",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "prodcat1desc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": false,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "channeltype": [{
+      "fieldprop": [{
+          "formcontrolname": "channeltypename",
+          "label": "Channel Type",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Channel Type",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "channeltypedesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],    
+    "cabinets": [{
+      "fieldprop": [{
+          "formcontrolname": "cabinetsname",
+          "label": "Cabinets",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Cabinets",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "cabinetsdesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "channel": [{
+      "fieldprop": [{
+          "formcontrolname": "channelname",
+          "label": "Channel",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Channel",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "channeldesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "devefforttype": [{
+      "fieldprop": [{
+          "formcontrolname": "devefforttypename",
+          "label": "Dev Effort Type",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Dev Effort Type",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "devefforttypedesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "devcomplexity": [{
+      "fieldprop": [{
+          "formcontrolname": "devcomplexityname",
+          "label": "Dev Complexity",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Dev Complexity",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "devcomplexitydesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }],
+    "quarter": [{
+      "fieldprop": [{
+          "formcontrolname": "quartername",
+          "label": "Quarter",
+          "type": "text",
+          "api": "",
+          "required": "required",
+          "placeholder": "Enter Quarter",
+          "action": "",
+          "pipe": ""
+        },
+        {
+          "formcontrolname": "quarterdesc",
+          "label": "Description",
+          "type": "textarea",
+          "api": "",
+          "required": null,
+          "placeholder": "Enter Description",
+          "action": "",
+          "pipe": ""
+        }
+      ],
+      "api": [{
+        "api": "assets/config/grid-data.json",
+        "apidata": "",
+        "url": "",
+        "param": [{}]
+      }]
+    }]
+  }],
+  "transaction": [{}]
+}]

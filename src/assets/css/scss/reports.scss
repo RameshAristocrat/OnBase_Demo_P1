@@ -1,0 +1,202 @@
+@import "../scss/fonts.scss";
+@import "../scss/mixins.scss";
+
+.modal-header .close {
+  margin-top: -14px;
+}
+
+.mat-drawer-content {
+  background-color: $white-color;
+}
+.reports-header {
+  margin-top: -14px;
+  h1 {
+    font-size: 1.33em;
+    font-weight: 400;
+    margin: 16px 0px 14px 0px;
+  }
+}
+
+::ng-deep .mat-drawer-inner-container {
+  .mat-accordion {
+    .mat-expansion-panel {
+      &:first-of-type {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+      }
+      .disable_ripple {
+        padding: 6px 9px;
+        color: $reportheadertitle;
+        border: 1px solid $reportlefttabs;
+        border-left: 3px solid $reportheadertitle;
+        border-right: 0px;
+        border-radius: 0 !important;
+        margin-left: 5px;
+      }
+    }
+  }
+  .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+    box-shadow: 0 0px 0px 0px;
+  }
+  .mat-expansion-panel-header {
+    height: 35px !important;
+  }
+  .mat-expansion-panel-header-title {
+    color: $reportheadertitle;
+    opacity: none;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .mat-expansion-panel-header.mat-expanded:focus,
+  .mat-expansion-panel-header.mat-expanded:hover {
+    background: $white-color;
+  }
+  .mat-expansion-panel-body {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+
+    div {
+      p {
+        margin: 0 0 0px;
+        border-bottom: 1px solid $border;
+        border-left: 1px solid $border;
+        padding: 5px 15px 5px 0px;
+        a {
+          margin-left: 15px;
+          font-size: 14px !important;
+          font-family: "GothamRounded-Book";
+        }
+      }
+    }
+  }
+  .mat-expansion-panel-spacing {
+    margin: -6px 0px;
+  }
+}
+.example-container {
+  .mat-tab-group {
+    .mat-tab-header {
+      border-bottom: 0px;
+    }
+  }
+  #intake-content {
+    .filter-section {
+      border-top: 1px solid $border;
+      padding: 14px 0px 0px 15px;
+      margin: 0px 1px;
+      .filter-option {
+        margin-top: 10px !important;
+        button {
+          margin-top: 0px !important;
+        }
+      }
+    }
+    // .highlight{
+    //     background: $white-color;
+    // }
+  }
+  .cloudlex-tabs {
+    .mat-primary {
+      .mat-tab-label-container {
+        float: right;
+        margin-top: 1px;
+      }
+    }
+  }
+}
+.header-documets-content {
+  .btn-group {
+    margin-right: 12px;
+    .active {
+      background: $white-color;
+      font-weight: 700;
+    }
+    > .btn {
+      &:last-child {
+        &:not(:first-child) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.filterstatuspanel {
+  // .ng-select {
+  //   .ng-select-container {
+  //     .ng-value-container {
+  //       .ng-placeholder {
+  //         color: $black;
+  //       }
+  //     }
+  //   }
+  //   .ng-arrow-wrapper {
+  //     align-self: flex-end;
+  //     bottom: 9px;
+  //   }
+  // }
+  .dropheight {
+    .ng-select {
+      .ng-dropdown-panel {
+        .ng-dropdown-panel-items {
+          max-height: 180px;
+        }
+      }
+    }
+  }
+}
+
+.allIntakePopupfilter-wrapper {
+  .leadname {
+    .ng-select {
+      .ng-select-container {
+        .ng-value-container {
+          .ng-placeholder {
+            color: $black;
+            margin-top: -1px;
+          }
+        }
+      }
+    }
+  }
+
+  .campaign-matinput {
+    .example-full-width {
+      .mat-form-field-wrapper {
+        .mat-form-field-flex {
+          .mat-form-field-infix {
+            .mat-form-field-label-wrapper {
+              .mat-form-field-label {
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.intakecampaign-filter {
+  .select-date {
+    .mat-form-field-appearance-legacy {
+      .mat-form-field-infix {
+        padding: 0;
+        border: 0;
+      }
+      .mat-form-field-label {
+        top: 1.8125em;
+      }
+    }
+    .mat-form-field-label-wrapper {
+      top: -2.01em;
+      padding-top: 2.5em;
+    }
+    .mat-input-element:disabled {
+      padding: 0px 0px 1px 0px;
+    }
+  }
+}

@@ -1,0 +1,999 @@
+@import "../scss/fonts.scss";
+@import "../scss/mixins.scss";
+@import "../scss/cloudlex-variables.scss";
+
+.cloudlex {
+  .mat-table {
+    font-family: "GothamRounded-Book";
+  }
+}
+.referred-matter-wrapper {
+  .mat-tab-body-content {
+    overflow-x: hidden;
+  }
+  .mat-sort-header-container {
+    display: table-cell;
+    min-width: 162px;
+  }
+  .tablegrid table {
+    thead {
+      th {
+        display: table-cell;
+        // min-width: 162px;
+      }
+    }
+  }
+}
+.tablegrid {
+  .mat-elevation-z8 {
+    box-shadow: none;
+  }
+  table {
+    thead {
+      background: $gridheader;
+      font-weight: bold;
+      tr {
+        &.mat-header-row {
+          height: auto;
+        }
+      }
+      th {
+        @include tablefonts;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        button {
+          text-align: left;
+        }
+        .mat-sort-header-arrow {
+          display: none;
+        }
+      }
+    }
+    ul {
+      padding: 0;
+      padding-right: 3px;
+      li {
+        span {
+          @include tablefonts;
+          display: inline;
+          //  white-space: wrap;
+          word-break: break-all;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-right: 5px;
+          &.saved-search-link {
+            color: #2a83b1;
+          }
+        }
+      }
+    }
+  }
+
+  td.mat-cell {
+    padding-top: 5px;
+    &:first-of-type {
+      padding-left: 15px;
+    }
+    &:last-of-type {
+      padding-right: 10px;
+    }
+    .retrieve-alert-icon {
+      margin-top: -1px;
+      display: block;
+    }
+  }
+  td.mat-footer-cell {
+    &:first-of-type {
+      padding-left: 15px;
+    }
+  }
+  th.mat-header-cell {
+    &:first-of-type {
+      padding-left: 15px;
+      padding-right: 15px; /*Nirupama Added Aug1st*/
+    }
+  }
+}
+.filter-section {
+  padding: 10px 0px 0px;
+  .input-search {
+    border: 1px solid $black !important;
+    margin-left: 5px;
+  }
+  .filter-option {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    .border-left-right {
+      border-left: 1px solid $borderright;
+      padding-left: 15px;
+      border-right: 1px solid $borderright;
+      padding-right: 15px;
+      line-height: 10px;
+    }
+  }
+}
+.margin-0 {
+  margin: 0;
+}
+.d-flex {
+  display: flex;
+}
+
+.contactgrid {
+  td.mat-cell {
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+td.mat-footer-cell {
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+th.mat-header-cell {
+  &:last-of-type {
+    padding-right: 0 !important;
+  }
+}
+
+#intake-content,
+.intakecontent,
+#archived-content,
+.referral-matters,
+.referral-intake,
+.contactgrid,
+.contact-content {
+  .cdk-column-matterName,
+  .cdk-column-SOLdateAndDateOfIncident,
+  .cdk-column-LeadName,
+  .cdk-column-NOCdateAndDateOfIncident,
+  .cdk-column-matter_file_index,
+  .cdk-column-template_name,
+  .cdk-column-template_description,
+  .cdk-column-full_name,
+  .cdk-column-Type,
+  .cdk-column-LeadSourceAndDescription {
+    ul {
+      li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+      }
+    }
+  }
+  .cdk-column-status,
+  .cdk-column-plaintiffName,
+  .cdk-column-type,
+  .cdk-column-eventTitle,
+  .cdk-column-eventDescription,
+  .cdk-column-eventLocation,
+  .cdk-column-name,
+  .cdk-column-name,
+  .cdk-column-title,
+  .cdk-column-description,
+  .cdk-column-location,
+  .cdk-column-referredOutTo,
+  .cdk-column-message,
+  .cdk-column-statusAndSubstatus,
+  .cdk-column-documentname,
+  .cdk-column-category,
+  .cdk-column-category_name,
+  .cdk-column-type_speciality,
+  .cdk-column-email_ids,
+  .cdk-column-fax_numbers,
+  .cdk-column-State,
+  .cdk-column-status_subStatus {
+    ul {
+      li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px;
+      }
+    }
+  }
+  .cdk-column-matterName,
+  .cdk-column-intakeName,
+  .cdk-column-typeSubtypeCategory {
+    ul {
+      li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 220px;
+      }
+    }
+  }
+  .cdk-column-venue,
+  .cdk-column-Category,
+  .cdk-column-AssignedTo,
+  .cdk-column-ReferredTo,
+  .cdk-column-ReferredBy,
+  .cdk-column-Type,
+  .cdk-column-TypeAndSubtype,
+  .cdk-column-StatusSubstatus,
+  .cdk-column-CompliedHeld,
+  .cdk-column-EstimatedCaseValue,
+  .cdk-column-Campaign,
+  .cdk-column-TaskName,
+  .cdk-column-Status,
+  .cdk-column-TaskAssignedBy,
+  .cdk-column-TaskAssignedTo,
+  .cdk-column-category,
+  .cdk-column-categoryname,
+  .cdk-column-matterAttorney,
+  .cdk-column-courtVenue,
+  .cdk-column-assignedUser {
+    ul {
+      li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100px;
+      }
+    }
+  }
+  .cdk-column-phone_numbers,
+  .cdk-column-EventTypeAndTitle,
+  .cdk-column-PlaintiffName {
+    ul {
+      li {
+        span {
+          overflow: hidden;
+          max-width: 150px;
+          word-break: break-word;
+          text-overflow: initial;
+          display: block;
+        }
+      }
+    }
+  }
+  .cdk-column-address {
+    ul {
+      li + li {
+        span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+  .cdk-column-csNumber {
+    ul {
+      li {
+        overflow: hidden;
+        max-width: 75px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.eventslistoptions {
+  .mat-tab-body-wrapper {
+    .filter-section {
+      display: none;
+    }
+  }
+}
+
+#upcomingSol {
+  .cdk-column-TypeAndSubtype,
+  .cdk-column-Category {
+    ul li {
+      max-width: 150px;
+    }
+  }
+}
+#upcomingNoc {
+  .cdk-column-StatusSubstatus {
+    ul li {
+      max-width: 150px;
+    }
+  }
+  .cdk-column-TypeAndSubtype {
+    ul li {
+      max-width: 200px;
+    }
+  }
+}
+
+#taskSummary {
+  .cdk-column-TaskName,
+  .cdk-column-TaskAssignedBy,
+  .cdk-column-TaskAssignedTo {
+    ul li {
+      max-width: 160px;
+    }
+  }
+}
+#intakeCampaign,
+#allIntakeReports {
+  .cdk-column-statusAndSubstatus,
+  .cdk-column-ReferredBy,
+  .cdk-column-Campaign {
+    ul li {
+      max-width: 80px;
+    }
+  }
+  .cdk-column-Type {
+    ul li {
+      max-width: 200px;
+    }
+  }
+}
+#allIntakeReports,
+#upcomingSol,
+#upcomingNoc,
+#intakeValuation,
+#intakeCampaign,
+#inkateStateVenue,
+#taskSummary {
+  table.mat-table {
+    table-layout: fixed;
+    td {
+      span {
+        word-break: break-word;
+      }
+    }
+  }
+}
+#allMatterReports,
+#matterCourtVenue,
+#matterEventReport,
+#matterExportReport,
+#matterNocs,
+#matterSols,
+#newMatterOpened,
+#matterAge,
+#matterExpenseReport,
+#matterCourtVenue,
+#matterSettlementReport,
+#matterInsuranceReport,
+#matterplaintiffReport,
+#matterContactReport,
+#matterMedicalReport,
+#matterValuationReport {
+  table.mat-table {
+    table-layout: fixed;
+    td {
+      span,
+      a {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        max-width: 100%;
+        font-family: "GothamRounded-Book";
+      }
+    }
+  }
+}
+#intakeCampaign {
+  .mat-column-Campaign {
+    ul {
+      li {
+        span {
+          max-width: 100px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+.mat-column-address {
+  .address-icon {
+    display: inline-flex;
+  }
+  .pl34 {
+    display: flex;
+  }
+}
+.contactgrid td.mat-cell:last-of-type {
+  padding-top: 0;
+}
+.contactgrid td.mat-cell:last-of-type:last-of-type ul {
+  position: relative;
+  bottom: 10px;
+}
+#matterEventReport {
+  .cdk-column-MatterName {
+    ul li {
+      a {
+        width: 230px;
+      }
+    }
+  }
+  .cdk-column-EventLocation {
+    ul li {
+      span {
+        width: 100px;
+      }
+    }
+  }
+}
+#allMatterReports {
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 10px 5px;
+  }
+
+  .cdk-column-MatterName {
+    ul li {
+      a {
+        width: 150px;
+      }
+    }
+  }
+  .cdk-column-CourtAndVenue {
+    ul li {
+      span {
+        width: 70px;
+      }
+    }
+  }
+  .cdk-column-Type {
+    ul li {
+      width: 150px;
+    }
+  }
+}
+
+#matterEventReport {
+  .cdk-column-EventDateAndDateOfIncident {
+    ul {
+      li:nth-child(1) {
+        span {
+          font-size: 34px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+#matterSols {
+  .cdk-column-SOLdateAndDateOfIncident {
+    ul {
+      li:nth-child(1) {
+        span {
+          font-size: 34px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+#matterNocs {
+  .cdk-column-NOCdateAndDateOfIncident {
+    ul {
+      li:nth-child(1) {
+        span {
+          font-size: 34px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+#newMatterOpened {
+  .cdk-column-IntakeDateAndDOI {
+    ul {
+      li:nth-child(1) {
+        span {
+          font-size: 34px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+#matterNocs,
+#matterSols,
+#newMatterOpened,
+#matterAge {
+  .cdk-column-StatusSubstatus,
+  .cdk-column-TypeAndSubtype,
+  .cdk-column-StatusAndSubstatus {
+    li:nth-child(1) {
+      span {
+        font-weight: bolder;
+        font-family: "GothamRounded-medium";
+      }
+    }
+  }
+}
+#matterAge {
+  .cdk-column-Age {
+    ul li {
+      span {
+        font-size: 34px;
+      }
+    }
+  }
+}
+#matterExpenseReport {
+  td,
+  th {
+    padding: 10px;
+  }
+  .cdk-column-MatterName {
+    ul li {
+      a {
+        width: 150px;
+      }
+    }
+  }
+  .cdk-column-ExpenseName,
+  .cdk-column-AssociatedParty {
+    ul li {
+      span {
+        width: 150px;
+      }
+    }
+  }
+  .cdk-column-ExpenseAmount,
+  .cdk-column-PaidAmount,
+  .cdk-column-OutstandingAmount {
+    ul {
+      li {
+        span {
+          float: right;
+        }
+      }
+    }
+    text-align: right;
+  }
+}
+#matterCourtVenue {
+  .cdk-column-MatterCount {
+    ul {
+      li:nth-child(1) {
+        span {
+          font-size: 34px;
+          line-height: 37px;
+        }
+      }
+    }
+  }
+}
+#matterSettlementReport {
+  .cdk-column-MatterName {
+    ul {
+      li:nth-child(1) {
+        a {
+          width: 150px;
+        }
+      }
+    }
+  }
+  .cdk-column-DemandAndOffer {
+    line-height: 2.5;
+  }
+}
+#matterValuationReport {
+  .cdk-column-ValuationAmount {
+    ul {
+      li {
+        span {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+#matterCourtVenue,
+#matterAge {
+  .filter-section {
+    .header-documets-content {
+      .filter-option:nth-last-of-type(2) {
+        border-left: 1px solid #d3d9de !important;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+#matterContactReport {
+  .matter-contct-select {
+    position: relative;
+    left: calc(60% - 100px);
+    bottom: 15px;
+  }
+}
+#matterplaintiffReport {
+  .cdk-column-MatterName {
+    a {
+      width: 100px;
+    }
+  }
+  .mat-column-Phone {
+    .icon {
+      margin-top: 0px !important;
+      width: 30px !important;
+    }
+    ul {
+      li {
+        display: flex;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+// Ag Grid -- Global Styles
+.ag-grid.ag-theme-alpine {
+  font-family: GothamRounded-Book;
+  .ag-root-wrapper {
+    border: none;
+    border-radius: 0;
+    .ag-root-wrapper-body {
+      .ag-root {
+        .ag-header {
+          border: 0;
+          background: $gridheader;
+          .ag-header-viewport {
+            .ag-header-container {
+              .ag-header-row {
+                .ag-header-cell {
+                  padding: 5px 12px;
+                  .ag-cell-label-container {
+                    .ag-header-cell-label {
+                      .ag-header-cell-text {
+                        white-space: normal;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: 19px;
+                      }
+                    }
+                  }
+                }
+                .ag-header-cell.amount {
+                  .ag-cell-label-container {
+                    .ag-header-cell-label {
+                      .ag-header-cell-text {
+                        text-align: right;
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .ag-body-viewport {
+          .ag-center-cols-clipper {
+            .ag-center-cols-viewport {
+              .ag-center-cols-container {
+                .ag-row {
+                  z-index: 1000;
+                  &.ag-row-hover {
+                    background-color: $bordergray;
+                  }
+                  .ag-cell {
+                    padding: 5px 12px;
+                    white-space: normal;
+                    font-size: 13px;
+                    line-height: 19px;
+                    border: 0;
+                    color: $black;
+
+                    .ag-cell-wrapper {
+                      align-items: baseline;
+                      .ag-selection-checkbox {
+                        margin-top: 1px;
+                        align-items: baseline;
+                        .ag-checkbox {
+                          .ag-input-field-label {
+                            .ag-checkbox-input-wrapper {
+                              .ag-checkbox-input {
+                                opacity: 0.5;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    ul {
+                      margin-bottom: 0px;
+                      li {
+                        margin-bottom: 0;
+                        span {
+                          font-size: 13px;
+                          line-height: 19px;
+                          pointer-events: visible;
+                        }
+                        .default-linked-document,
+                        .default-link,
+                        .default-view-comment {
+                          position: absolute;
+                          top: 0px;
+                          vertical-align: top;
+                        }
+                      }
+                    }
+                    &.amount {
+                      text-align: right;
+                    }
+                    &.memo-cls {
+                      pointer-events: none;
+                      .default-view-comment {
+                        margin-top: 5px;
+                        pointer-events: visible;
+                        cursor: pointer;
+                      }
+                    }
+                    &.ellipses {
+                      pointer-events: none;
+                      ul {
+                        margin-bottom: 0px;
+                        li {
+                          margin-bottom: 0px;
+                          span {
+                            width: fit-content;
+                            max-width: 100%;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            display: block;
+                            white-space: nowrap;
+                            color: $black;
+                            line-height: 15px;
+                            font-family: GothamRounded-Book;
+                          }
+                        }
+                      }
+                    }
+                    &.contact-name {
+                      pointer-events: none;
+                      ul {
+                        margin-bottom: 0px;
+                        li {
+                          margin-bottom: 0;
+                          span {
+                            width: fit-content;
+                            max-width: 100%;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            display: block;
+                            white-space: nowrap;
+                            color: $tagclose;
+                            font-family: GothamRounded-Book;
+                            cursor: pointer;
+                          }
+                        }
+                      }
+                    }
+                    &.date-paid {
+                      pointer-events: none;
+                      ul {
+                        li:nth-child(2) {
+                          pointer-events: visible;
+                          color: $black;
+                          span {
+                            pointer-events: visible;
+                            color: $black;
+                          }
+                        }
+                        li:nth-child(3) {
+                          span {
+                            color: #2a83b1;
+                            cursor: pointer;
+                            pointer-events: visible;
+                          }
+                        }
+                      }
+                    }
+                    .ag-cell-focus,
+                    .ag-cell-no-focus {
+                      border-color: transparent;
+                    }
+                    &.disable-checkbox {
+                      .ag-cell-wrapper {
+                        .ag-selection-checkbox {
+                          .ag-checkbox {
+                            .ag-checkbox-input-wrapper {
+                              cursor: not-allowed;
+                              .ag-checkbox-input {
+                                pointer-events: none;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .ag-body-horizontal-scroll {
+          display: none;
+          &-viewport {
+            overflow-x: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+.ag-row-focus,
+.ag-row-selected {
+  background-color: $bordergray !important;
+}
+
+// memo dialog
+.memo-container {
+  .modal-header {
+    .modal-title {
+      font-family: GothamRounded-Medium;
+      font-size: 18px;
+    }
+    .close {
+      float: right;
+      opacity: 0.2;
+      margin-right: 0px;
+    }
+  }
+  .modal-body {
+    margin-bottom: 15px;
+    .memo-data-content {
+      max-height: 210px;
+    }
+    .memo-content {
+      white-space: pre-wrap;
+      background-color: $white-color;
+      border-radius: 0px;
+      border: 0px;
+      padding: 0;
+      font-family: "GothamRounded-Book";
+      word-break: break-word;
+      font-size: 13.44px;
+    }
+  }
+}
+
+.task-summary,
+.mat-column-MatterName {
+  ul {
+    li {
+      a,
+      span {
+        width: auto;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.comma {
+  li {
+    &:last-child::after {
+      content: "";
+    }
+    span {
+      float: left;
+      margin-right: 2px;
+    }
+    &::after {
+      content: ",";
+      color: #2a83b1;
+      position: relative;
+      right: 0px;
+    }
+    float: left;
+  }
+}
+/* datatable scroll*/
+.matter-list-table {
+  .mat-column-select {
+    width: 2.5%;
+    .mat-checkbox.mat-accent {
+      position: relative;
+      top: 3px;
+      right: 5px;
+    }
+  }
+}
+#archived-content {
+  .mat-column-select {
+    width: 4%;
+  }
+}
+.notes-datatable {
+  .mat-row {
+    margin-top: 10px;
+  }
+  .mat-column-Select {
+    width: 3%;
+  }
+}
+.matter-notes-grid {
+  .notes-datatable {
+    .mat-column-Select {
+      width: 4% !important;
+    }
+  }
+}
+
+.user-management-grid {
+  .mat-column-select {
+    width: 10%;
+  }
+}
+.intake-list-table {
+  .mat-column-intakeName {
+    padding-left: 15px;
+    width: 25% !important;
+  }
+}
+
+.mat-table {
+  tr {
+    display: inline-table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  tbody {
+    table-layout: fixed;
+    display: table-row-group;
+    overflow-y: overlay !important;
+    width: 100% !important;
+    position: absolute;
+  }
+  .mat-header-row {
+    width: 100%;
+  }
+}
+@-moz-document url-prefix() {
+  .mat-table {
+    thead {
+      tr {
+        width: 99% !important;
+      }
+    }
+    tbody {
+      overflow-y: scroll !important;
+    }
+  }
+}
+
+.notes-datatable {
+  tbody {
+    width: 97.4% !important;
+  }
+}
+.matter-notes-grid {
+  .notes-datatable {
+    tbody {
+      width: 100% !important;
+    }
+  }
+}
+
+.cloudlex-common-data-table {
+  td {
+    ul {
+      li {
+        span,
+        a {
+          width: fit-content !important;
+          max-width: 100%;
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

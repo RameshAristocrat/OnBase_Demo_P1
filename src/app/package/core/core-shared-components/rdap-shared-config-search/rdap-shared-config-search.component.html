@@ -1,0 +1,106 @@
+<mat-card style="margin-bottom:2%;">
+    <mat-card-content>
+        <div class="col-lg-12">
+            <form *ngIf="searchform" action="" [formGroup]="searchform">
+                <div class="row">
+                    <div class="col-lg-4 form-group" *ngFor="let item of formdata;">
+                        <mat-form-field *ngIf="item.type =='text'">
+                            <mat-label>
+                                {{item.label}}
+                                <span style="color: red;" *ngIf="item.required == 'required'"
+                                    class="compulsary-mark">*</span>
+                            </mat-label>
+                            <input type="text" matInput name='{{item.controlname}}'
+                                formControlName="{{item.formcontrolname}}" [disabled]="false" />
+                            <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
+                                {{item.label}} required</mat-error>
+                        </mat-form-field>
+                        <mat-form-field *ngIf="item.type =='textarea'">
+                            <mat-label>
+                                {{item.label}}
+                                <span style="color: red;" *ngIf="item.required == 'required'"
+                                    class="compulsary-mark">*</span>
+                            </mat-label>
+                            <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" name="{{item.controlname}}"
+                                formControlName="{{item.formcontrolname}}"
+                                placeholder="{{item.placeholder}}"></textarea>
+                            <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
+                                {{item.label}} required</mat-error>
+                        </mat-form-field>
+                        <div class="form-group" *ngIf="item.type =='select'">
+                            <fieldset class="form-group">
+                                <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
+                                    bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
+                                    [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
+                                    [multiple]="item.multiple" appendTo="body" required>
+                                    <ng-template ng-option-tmp let-item="item">
+                                        {{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                            </fieldset>
+                            <!-- <mat-error *ngIf="item.type =='select' && checkError(item.formcontrolname, item.required)">
+                                {{item.label}} required</mat-error> -->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: left;" *ngIf="searchform">
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white" (click)="submit()"
+            [disabled]="!searchform.valid"
+            [ngClass]="{'errorbtn':!searchform.valid, 'successbtn': searchform.valid}">Search</button>
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Reset</button>
+    </mat-card-actions>
+</mat-card>
+<mat-card *ngIf="tempFilterData">
+    <mat-card-title>
+        <span>Search Results</span>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="col-lg-12">
+            <table mat-table [dataSource]="tempFilterData" matSort>
+                <ng-container matColumnDef="select">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>Select</th>
+                    <td mat-cell *matCellDef="let row">
+                        <mat-radio-group [(ngModel)]="selectedResult">
+                            <mat-radio-button [value]="row"></mat-radio-button>
+                        </mat-radio-group>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="{{colitem.title}}" *ngFor="let colitem of loopGridContent;">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{colitem.title | titlecase}} </th>
+                    <td mat-cell *matCellDef="let element"> {{element[colitem.title]}} </td>
+                </ng-container>
+                <!-- <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef>Actions </th>
+                    <td mat-cell *matCellDef="let row">
+         
+                      <button mat-icon-button matTooltip="Click to Edit" class="iconbutton">
+                        <span class="material-icons-outlined" style="color: rgb(158, 158, 154);">
+                            edit_circle
+                            </span>                    
+                        </button>
+                      <button mat-icon-button matTooltip="Click to Delete" class="iconbutton">
+                        <span class="material-icons-outlined" style="color: rgb(158, 158, 154);">
+                            remove
+                            </span>                   
+                        </button>
+                    </td>
+                  </ng-container> -->
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+    <mat-card-actions style="text-align: left;">
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white"
+            (click)="submit()">Open</button>
+        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Cancel</button>
+        <button mat-raised-button style="width: 20%;background-color: #300c46;color:white" *ngIf="route"
+            (click)="addnewrecord(route)">Add New Record</button>
+    </mat-card-actions>
+</mat-card>

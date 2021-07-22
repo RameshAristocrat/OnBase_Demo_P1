@@ -1,0 +1,13 @@
+        <mat-card style="margin-bottom:1%;">
+            <mat-card-content>
+                <ol class="breadcrumb">
+                    <li *ngFor="let item of breadcrumbarr; let i=index">
+                      <a
+                      [routerLink]="item.url" 
+                      routerLinkActive="router-link-active">
+                      {{item.label}}
+                    </a>
+                    </li>
+                  </ol>
+            </mat-card-content>
+        </mat-card>

@@ -1,0 +1,19 @@
+@import '../scss/fonts.scss';
+@import "../scss/mixins.scss";
+@import "src/assets/css/scss/cloudlex-variables.scss";
+
+.matter-intakedetails {   
+      .intake-form-cart {
+        textarea.mat-input-element {
+            height: 80px;
+       }
+       .mat-radio-button {
+        margin-right: 10px;
+        }
+        .memo-textarea {
+            textarea.mat-input-element {
+                height: 250px !important;
+           }
+        }
+    } 
+}

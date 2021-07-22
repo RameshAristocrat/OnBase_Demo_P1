@@ -1,0 +1,142 @@
+<form style="padding-left: 2%;padding-right: 2%;min-height: 300px;padding-bottom: 2%;padding-top:2%;">
+    <div class="col-lg-12">
+        <div class="row">
+              <div class="col-lg-4 form-group required">
+                  <ng-select               
+                  [items]="linkedPinsObj"
+                  placeholder="Linked PINs"
+                  bindLabel="name"
+                  [clearable]="false"
+                  [virtualScroll]="true"
+                  [multiple]="true"
+                  appendTo="body">
+                  <ng-template ng-option-tmp let-item="item">
+                    {{ item.name }}
+                  </ng-template>
+                  </ng-select>
+              </div>
+              <div class="col-lg-4 form-group required">
+                <mat-checkbox [(ngModel)]="chkImpCurShed"><span>
+                    Impact to current schedules?
+                </span></mat-checkbox>
+              </div>
+              <div class="col-lg-4 form-group required">
+                <ng-select               
+                [items]="impactedPinsObj"
+                placeholder="Impacted PINs"
+                bindLabel="name"
+                [clearable]="false"
+                [virtualScroll]="true"
+                [multiple]="true"
+                appendTo="body">
+                <ng-template ng-option-tmp let-item="item">
+                  {{ item.name }}
+                </ng-template>
+                </ng-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 form-group required">
+                <mat-form-field style="width: 100%;">
+                    <mat-label>Development Deviation</mat-label>
+                    <textarea matInput
+                              cdkTextareaAutosize
+                              #autosize="cdkTextareaAutosize"
+                              cdkAutosizeMinRows="1"
+                              cdkAutosizeMaxRows="5"
+                              ></textarea>
+                  </mat-form-field>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-lg-4 orm-group required">
+                <mat-form-field>
+                    <mat-label>Market Required Date</mat-label>
+                    <input matInput [matDatepicker]="picker" appendTo="body">
+                    <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+            <div class="col-lg-4 form-group required">
+                <ng-select               
+                [items]="fyObj"
+                placeholder="FY"
+                bindLabel="name"
+                [clearable]="false"
+                [virtualScroll]="true"
+                appendTo="body">
+                <ng-template ng-option-tmp let-item="item">
+                  {{ item.name }}
+                </ng-template>
+                </ng-select>
+            </div>
+            <div class="col-lg-4 form-group required">
+                <ng-select               
+                [items]="quarterObj"
+                placeholder="Quarter"
+                bindLabel="name"
+                [clearable]="false"
+                [virtualScroll]="true"
+                appendTo="body">
+                <ng-template ng-option-tmp let-item="item">
+                  {{ item.name }}
+                </ng-template>
+                </ng-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 form-group">
+                <mat-form-field>
+                  <mat-label>
+                      Unit Forecast
+                    <span class="compulsary-mark">*</span>
+                    </mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="name"
+                  />
+                </mat-form-field>
+            </div>
+            <div class="col-lg-4 form-group required">
+                <ng-select               
+                [items]="currencyObj"
+                placeholder="Revenue Currency"
+                bindLabel="name"
+                [clearable]="false"
+                [virtualScroll]="true"
+                appendTo="body">
+                <ng-template ng-option-tmp let-item="item">
+                  {{ item.name }}
+                </ng-template>
+                </ng-select>
+            </div>
+            <div class="col-lg-4 form-group">
+                <mat-form-field>
+                  <mat-label>
+                    Revenue Forecast
+                    <span class="compulsary-mark">*</span>
+                    </mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="name"
+                    [ngModel]="revenuePrice | currency:'USD':'symbol':'2.2'"
+                  />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 form-group required">
+                <mat-checkbox [(ngModel)]="chkImpCurShed"><span>
+                    Incremental to plan?
+                </span></mat-checkbox>
+              </div>
+              <div class="col-lg-4 form-group required">
+                <mat-checkbox [(ngModel)]="chkImpCurShed"><span>
+                    Revenue added to LE or plan?
+                </span></mat-checkbox>
+              </div>
+        </div>
+    </div>
+</form>

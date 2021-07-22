@@ -1,0 +1,61 @@
+@import "./cloudlex-variables.scss";
+
+footer {
+  @include globalfooter;
+  overflow:hidden !important;
+  .cloudlex-footer {
+    @include cloudlexfooter;  
+    .mat-tab-group.mat-primary {
+      .mat-tab-header {
+        .mat-tab-label-container {
+          .mat-tab-list {
+            .mat-tab-labels {
+              .mat-tab-label {
+                width: auto;
+                padding: 0 !important;
+                @include footerstyles;
+
+                .mat-tab-label-content {
+                  @include mattabcontent;
+
+                  a {
+                    @include mattabanchorstyles;
+                    @include footerstyles;
+
+                    &:hover {
+                      @include mattabanchorhoverstyles;
+                    }
+                  }
+                }
+              }
+
+              .mat-tab-label.mat-tab-label-active {
+                @include footerstyles;
+
+                .mat-tab-label-content {
+                  font-weight: normal;
+                  transition: all 0.5s;
+
+                  &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background: $white-color;
+                    right: 0;
+                    bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .mat-ink-bar {
+        display: none;
+      }
+    }
+  }
+}

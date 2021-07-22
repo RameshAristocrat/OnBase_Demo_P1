@@ -1,0 +1,177 @@
+.btn {
+  padding: 3px 20px;
+  height: auto;
+  line-height: inherit;
+  font-size: 14px;
+}
+
+.mat-raised-button.mat-primary[disabled] {
+  background-color: $darkgray;
+  color: $white-color !important;
+}
+
+.forgot-password-btn {
+  background-color: $darkgray;
+  color: $white-color !important;
+  font-family: "GothamRounded-Book";
+
+  &:hover {
+    background-color: $darkgray;
+    color: $white-color !important;
+  }
+}
+
+.mat-raised-button.mat-primary {
+  background-color: $headerblue;
+}
+
+.btn-styleNone {
+  border: 0;
+}
+
+.btn-default {
+  border-radius: 17px;
+  border: 1px solid $defaultblue;
+  color: $defaultblue;
+  background: $white-color;
+  font-family: "GothamRounded-Book";
+  outline: 0;
+
+  &:hover {
+    color: $gray !important;
+    background-color: $btnhover-defaultbg !important;
+  }
+
+  &:disabled {
+    background-color: $white-color;
+    border-color: $lightgray;
+  }
+}
+
+.btndefault {
+  border-radius: 17px;
+  border: 1px solid $defaultblue;
+  color: $defaultblue;
+  background: $white-color;
+  font-family: "GothamRounded-Book";
+  outline: 0;
+  padding: 3px 20px;
+  height: auto;
+  line-height: inherit;
+  font-size: 14px;
+
+  &:hover {
+    color: $gray;
+    background-color: $btnhover-defaultbg;
+  }
+
+  &.small-btn {
+    font-size: 12px;
+    padding: 0 10px;
+    height: 22px;
+    line-height: 18px;
+  }
+}
+
+.btn-primary {
+  @include btn-primary;
+
+  &:hover {
+    @include btn-primary;
+  }
+}
+
+.btn-secondary {
+  width: 100%;
+  font-family: "GothamRounded-Book";
+
+  &.mat-primary {
+    font-family: "GothamRounded-Book";
+    background-color: $darkgray;
+  }
+}
+
+.btn-marketplace {
+  color: $white-color;
+  font-weight: bold;
+  background-color: $velancia;
+  border: 1px solid $velancia;
+  padding: 5px 10px 2px;
+  border-radius: 17px;
+  margin-top: 40px;
+
+  &:hover {
+    background-color: $velancia;
+    color: $white-color !important;
+  }
+
+  &:disabled {
+    color: $lightgray;
+  }
+
+  &:focus {
+    color: $white-color !important;
+  }
+}
+%default-Button {
+  border: 1px solid $defaultblue;
+  color: $tabsactive;
+  background: $white-color;
+  outline: 0;
+}
+%default-Button-Disable {
+  background-color: $white-color;
+  border-color: $lightgray;
+}
+.cloudlex-Button-Group {
+  padding: 0 20px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  border-radius: 17px;
+  margin-bottom: 0;
+  font-weight: 400;
+  touch-action: manipulation;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  &:hover {
+    color: $gray;
+    background-color: $btnhover-defaultbg;
+    border: 1px solid $defaultblue;
+  }
+}
+.cloudlex-Button-Group-Save {
+  @extend %default-Button;
+  &:disabled {
+    @extend %default-Button-Disable;
+  }
+}
+.cloudlex-Button-Group-Search {
+  @extend %default-Button;
+  height: 24px;
+  font-size: 12px;
+  line-height: 22px;
+  &:disabled {
+    @extend %default-Button-Disable;
+  }
+}
+.cloudlex-Button-Group-Cancel {
+  border: 1px solid transparent;
+  color: $tabsactive;
+  background: 0 0;
+  &:hover {
+    border: 1px solid $darkheader;
+    background: $white-color;
+  }
+}

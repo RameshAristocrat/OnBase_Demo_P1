@@ -1,0 +1,236 @@
+.dotted-dropdown {
+  .launcher-dropdown {
+    left: auto !important;
+    right: 0 !important;
+    top: auto !important;
+    transform: none !important;
+  }
+  .header-dots-icon {
+    margin-top: 0;
+  }
+}
+.img-circle {
+  border-radius: 50%;
+}
+.rdap-header-container {
+  .page-header-wrapper {
+    .left-section {
+      width: 75%;
+      float: left;
+      padding: 0;
+
+      .header-label {
+        display: block;
+        height: 33px;
+        line-height: 36px;
+        margin: 0;
+        margin-top: 5px;
+        padding-left: 19px;
+      }
+      .logo-txt {
+        font-size: 20px !important;
+        margin-left: 4px;
+        top: 0;
+      }
+    }
+    .nav-rightsection {
+      float: right;
+    }
+  }
+  a {
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .dropdown-menu > li > a {
+    font-size: 14px;
+    clear: both;
+    font-weight: 400;
+    color: #333 !important;
+    white-space: unset !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+    padding: 3px 20px;
+    line-height: 1.42857143;
+    display: block;
+  }
+
+  .profile-dropdown-set:before {
+    position: absolute;
+    top: -7px;
+    border-bottom: 7px solid $lightgray;
+    left: initial;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    content: "";
+    right: 12px;
+    display: inline-block;
+    border-bottom-color: $white-color;
+    width: 10px;
+  }
+  .breadcrumList {
+    li {
+      float: left;
+      list-style-type: none;
+      color: $breadcrumd-color;
+      padding-bottom: 0px;
+
+      ul {
+        a {
+          color: $black !important;
+        }
+        li {
+          width: 100%;
+        }
+      }
+    }
+    .white-dotted {
+      color: $white-color;
+      position: relative;
+      top: -1px;
+      margin: 0 24px;
+      font-size: 32px;
+      cursor: pointer;
+      font-weight: 900;
+      left: 2px;
+      font-family: "GothamRounded-Book";
+    }
+    a {
+      color: $white-color;
+      &:hover {
+        color: $white-color;
+        text-decoration: none;
+      }
+    }
+    .trim-info {
+      max-width: 335px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+      font-size: 15px !important;
+    }
+    .dropdown-toggle {
+      &::after {
+        border: 0;
+      }
+    }
+  }
+  .sortby-dropdown {
+    border: 0;
+    padding-left: 3px;
+    position: relative;
+    top: -6px;
+  }
+}
+.small-app-title {
+  color: $black;
+  text-transform: capitalize;
+  border-bottom: 1px solid $lightgray;
+  padding-bottom: 10px;
+}
+.profile-info {
+  .username-profile-dropdown {
+    width: 180px !important;
+  }
+}
+.launcher-dropdown {
+  width: 300px !important;
+  padding: 10px 11px 0;
+  max-height: 484px;
+  font-size: 12px;
+  color: $launcherdropdown;
+}
+.dotted-dropdown {
+  .launcher-dropdown {
+    margin: 4px -26px 0 0 !important;
+  }
+}
+.quick-hover {
+  &:hover {
+    border: 1px solid $bordergray;
+    background: $bordergray;
+    border-radius: 5px;
+  }
+}
+.hover {
+  border: 1px solid $white-color;
+  width: 59px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.img {
+  img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.dots-popup {
+  .title {
+    color: $launchertitle;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  .username-dropdown {
+    &:before {
+      position: absolute;
+      top: -7px;
+      right: 32px;
+      display: inline-block;
+      border-bottom: 7px solid $lightgray;
+      border-left: 7px solid transparent;
+      border-bottom-color: $white-color;
+      width: 10px;
+      left: initial;
+      border-right: 7px solid transparent;
+      content: "";
+    }
+  }
+}
+.quick-access-menu-wrapper {
+  .add-ons {
+    padding-top: 6px;
+    font-weight: 700;
+    color: $black;
+    border-bottom: 1px solid $lightgray;
+  }
+}
+.small-app-title1 {
+  color: $black;
+  text-transform: capitalize;
+  border-bottom: 1px solid $lightgray;
+}
+.small-boxes {
+  padding: 6px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  .img {
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    display: inline-block;
+    cursor: pointer;
+  }
+  &:hover {
+    background: $bordergray;
+  }
+}
+.subdiv {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  top: -10px;
+  left: 3px;
+}
+.profile-dropdown-set {
+  &:before {
+    border-right: 7px solid transparent;
+    content: "";
+  }
+}

@@ -1,0 +1,50 @@
+.grid-container {
+    margin: 20px;
+  }
+  
+
+  .mat-card {
+    background: #fff;
+    //color: rgb(174 171 171);
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.mat-form-field{
+    width: 100%;
+}
+
+:host::ng-deep .mat-form-field {
+    .mat-input-element {
+        margin-top: 0.9em !important;
+    }
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  th{
+      background-color:rgb(158, 158, 154);;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      height: 50%;
+      text-align: center;
+  }
+  td{
+    font-size: 14px;
+  }
+  tr.mat-header-row {
+    height: 30px;
+}

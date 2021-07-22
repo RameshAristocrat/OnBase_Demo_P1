@@ -1,0 +1,171 @@
+body {
+  // displaying text size in Safari Browser
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+.logo-landingpage {
+  width: 74%;
+  img {
+    width: 100%;
+  }
+}
+input.mat-input-element {
+  @include inputfonts;
+}
+.new-login-form {
+  margin-top: 50px;
+  .form-group label {
+    @include formlabel;
+  }
+}
+.login-right {
+  @include logincolumn;
+  &.login-right-new {
+    padding: 34px 57px 0;
+  }
+}
+
+.login-left {
+  @include logincolumn;
+  &.login-left-new {
+    background-color: $cloudlexblue;
+    background-image: none;
+    padding: 68px 90px 0;
+    position: relative;
+
+    .new-login-title {
+      text-transform: inherit;
+      font-family: "ProximaNova-Bold";
+      font-size: 36px;
+      font-weight: 700;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.19;
+      letter-spacing: -0.7px;
+      text-align: $text-center;
+      color: $white-color;
+    }
+  }
+}
+.carousel-item {
+  &:focus {
+    outline: 0;
+    border: 0;
+  }
+}
+.login-carousel {
+  .carousel-item {
+    .carousel-caption {
+      h1 {
+        font-size: 36px;
+        letter-spacing: -0.7px;
+        text-align: $text-center;
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.19;
+        color: $white-color;
+        font-family: "ProximaNova-Bold";
+      }
+    }
+  }
+}
+.forget-pass-main {
+  margin-top: 10px;
+  a {
+    color: $defaultblue;
+    &.forget-pass {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: $activeblue;
+      text-decoration: none;
+    }
+  }
+}
+
+.login-bottom-div {
+  font-size: 10px;
+  margin-top: 9px;
+  color: #8c9195;
+  p {
+    margin-bottom: 5px;
+    .forget-pass {
+      font-size: 10px;
+      text-align: right;
+    }
+  }
+}
+
+.brand-logo {
+  position: absolute;
+  bottom: 30px;
+  width: 75%;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+
+  h6 {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: $formlabel;
+    margin-bottom: 7px;
+  }
+  .branding {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: $text-center;
+    img {
+      max-width: 100%;
+      margin-top: 7px;
+    }
+  }
+}
+.capterra {
+  padding-top: 15px;
+  border-top: 1px solid $lightgray;
+  margin-top: 15px;
+}
+.cloudlex {
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    @include input-placeholder;
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    @include input-placeholder;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    @include input-placeholder;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  /* Large Desktop */
+  .main-left-wrapper {
+    .logo-landingpage img {
+      width: auto;
+    }
+    .forget-pass-main {
+      margin-top: 30px;
+      a {
+        &.forget-pass {
+          font-size: 16px;
+        }
+      }
+    }
+    .login-bottom-div {
+      font-size: 16px;
+    }
+  }
+}

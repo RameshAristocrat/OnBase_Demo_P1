@@ -1,0 +1,39 @@
+{
+  "imgArray": [
+    {
+      "img": "https://picsum.photos/id/501/900/500",
+      "heading": "first",
+      "description": "first heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/502/900/500",
+      "heading": "h2",
+      "description": "second heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/503/900/500",
+      "heading": "h3",
+      "description": "third heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/504/900/500",
+      "heading": "h4",
+      "description": "fourth heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/505/900/500",
+      "heading": "h5",
+      "description": "fifth heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/506/900/500",
+      "heading": "h6",
+      "description": "sixth heading's description"
+    },
+    {
+      "img": "https://picsum.photos/id/507/900/500",
+      "heading": "h7",
+      "description": "seventh heading's description"
+    }
+  ]
+}

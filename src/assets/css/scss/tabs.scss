@@ -1,0 +1,173 @@
+@import "../scss/fonts.scss";
+
+.cloudlex {
+  .mat-tab-label {
+    color: $black;
+    opacity: 1;
+    padding: 10px;
+    min-width: 80px;
+    font-size: 16px;
+    font-family: "GothamRounded-Book";
+    font-weight: bold;
+
+    &.mat-tab-label-active {
+      color: $tabsactive;
+    }
+
+    &:hover {
+      color: $activeblue;
+    }
+  }
+
+  .mat-tab-group {
+    &.mat-primary {
+      .mat-ink-bar {
+        background: $activeblue;
+      }
+    }
+  }
+
+  .tabgroup {
+    .mat-tab-label {
+      //color: $tabcolor;
+
+      &:hover {
+        color: $activeblue;
+      }
+
+      &.mat-tab-label-active {
+        color: $black;
+        font-family: "GothamRounded-Medium";
+        font-weight: normal !important;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .cloudlex-tab-content {
+    .mat-tab-label {
+      font-weight: normal;
+      font-size: 14px;
+      flex: auto;
+
+      .matter-count {
+        font-size: 22px;
+        display: block;
+        font-family: "GothamRounded-Light";
+      }
+
+      &.mat-tab-label-active {
+        color: $black;
+        font-weight: bold;
+      }
+    }
+
+    .mat-tab-list {
+      padding: 10px 0;
+    }
+
+    .mat-tab-label-content {
+      display: block;
+    }
+  }
+}
+
+.cloudlex .referral-matters .mat-tab-label:nth-child(10):before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #d1d7dc;
+  position: absolute;
+  left: 0;
+}
+
+.cloudlex .referral-intake .mat-tab-label:nth-child(5):before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #d1d7dc;
+  position: absolute;
+  left: 0;
+}
+
+.cloudlex .intakes-manager .mat-tab-label:nth-child(6):before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #d1d7dc;
+  position: absolute;
+  left: 0;
+}
+
+.cloudlex .matter-manager .mat-tab-label:nth-child(10):before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #d1d7dc;
+  position: absolute;
+  left: 0;
+}
+
+.intakedashboard {
+  .tabslinks {
+    .mat-tab-label.mat-tab-label-active {
+      font-family: "GothamRounded-Medium";
+      font-weight: normal !important;
+      color: #000;
+    }
+  }
+}
+
+.cloudlex-tab-group {
+  .mat-tab-group {
+    &.mat-primary {
+      .mat-ink-bar {
+        display: none;
+      }
+    }
+  }
+  .mat-tab-label-content {
+    padding: 10px;
+    min-width: 80px;
+    font-size: 16px;
+    font-family: "GothamRounded-Book";
+  }
+  .mat-tab-label {
+    &:hover {
+      color: $activeblue;
+    }
+
+    &.mat-tab-label-active {
+      color: $tabsactive !important;
+      font-family: "GothamRounded-Medium";
+      font-weight: bold !important;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: $activeblue;
+        right: 0;
+        bottom: 0;
+      }
+      &:hover {
+        color: $tabsactive !important;
+      }
+    }
+  }
+}
+.sub-tabgroup {
+  .mat-tab-label-content {
+    font-size: 14px !important;
+    min-width: 38px !important;
+    padding: 4px;
+    &:active {
+      font-weight: bold !important;
+    }
+  }
+}

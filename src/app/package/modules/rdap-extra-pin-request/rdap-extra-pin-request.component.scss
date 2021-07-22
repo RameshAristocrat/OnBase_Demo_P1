@@ -1,0 +1,15 @@
+.grid-container {
+    margin: 20px;
+    min-height:calc(100vh - 100px); 
+  }
+  
+
+  .mat-card {
+    background: #fff;
+    //color: rgb(174 171 171);
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 16px;
+    font-weight: 400;
+}
