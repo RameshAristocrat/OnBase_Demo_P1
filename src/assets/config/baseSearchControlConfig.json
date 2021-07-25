@@ -1,0 +1,70 @@
+[{
+    "explorer": [{
+        "basesearch": [{
+            "fieldprop": [{
+                "formcontrolname": "document",
+                "label": "Document",
+                "type": "select",
+                "api": "assets/config/document.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Document",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              },{
+                "formcontrolname": "documentlist",
+                "label": "DocumentList",
+                "type": "select",
+                "api": "assets/config/documentlist.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Document List",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              },{
+                "formcontrolname": "documenttypegroup",
+                "label": "Document Type Group",
+                "type": "select",
+                "api": "assets/config/documenttypegroup.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Document Type Group",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              },{
+                "formcontrolname": "basedocumenttype",
+                "label": "Document Type",
+                "type": "select",
+                "api": "assets/config/documenttype.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Document Type",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              }
+            ],
+            "api": [{
+              "api": "assets/config/grid-data.json",
+              "apidata": "",
+              "url": "",
+              "param": [{}]
+            }]
+        }]
+    }]
+}]

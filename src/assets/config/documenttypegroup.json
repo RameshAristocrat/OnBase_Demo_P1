@@ -1,0 +1,16 @@
+[{
+    "id":1,
+    "name": "All"
+  }, {
+    "id":2,
+    "name": "Accounts Payable"
+  }, {
+    "id":3,
+    "name": "Accounts Receivable"
+  }, {
+    "id":4,
+    "name": "Signature Authority"
+  }, {
+    "id":4,
+    "name": "System Document"
+  }]

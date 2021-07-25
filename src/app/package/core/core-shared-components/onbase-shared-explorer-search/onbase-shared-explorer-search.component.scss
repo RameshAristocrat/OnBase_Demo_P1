@@ -1,0 +1,57 @@
+.mat-form-field{
+    width: 100%;
+}
+
+:host::ng-deep .mat-form-field {
+    .mat-input-element {
+        margin-top: 0.9em !important;
+    }
+}
+
+.mat-card-title{
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  th, td {
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  th{
+      background-color:rgb(158, 158, 154);;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      height: 50%;
+      text-align: center;
+  }
+  td{
+    font-size: 14px;
+  }
+  tr.mat-header-row {
+    height: 30px;
+}
+.cdk-overlay-container {
+  position: fixed !important;
+  z-index: 10000 !important;
+}
+
+.errorbtn{
+  width: 10%;background-color: #c2c2c2 !important;color:rgb(0, 0, 0)
+}
+.successbtn{
+  width: 10%;background-color: #300c46;color:white 
+}
+
+:host::ng-deep .mat-form-field {
+    .mat-input-element {
+        margin-top: 0.9em !important;
+    }
+}
+

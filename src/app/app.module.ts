@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,21 +30,20 @@ const config = {
     //RdapExtraPinRequestDropdownComponent,
     //RdapSearchSharedComponent,
     //StudioComponent,
-   // RDAPExtraPINRequestComponent
+    // RDAPExtraPINRequestComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
     AppRoutingModule,
-    ReactiveFormsModule ,
+    ReactiveFormsModule,
     CoreModule,
     CommonModule,
-    HttpClientModule,
-    //OktaAuthModule.initAuth(config),
+    HttpClientModule
   ],
   providers: [SidenavService,
     //WorkoutService,
@@ -52,4 +51,5 @@ const config = {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -32,6 +32,8 @@ import {
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { RdapSharedConfigSetuptableAddeditComponent } from './core-shared-components/rdap-shared-config-setuptable-addedit/rdap-shared-config-setuptable-addedit.component';
+import { OnbaseSharedExplorerSearchComponent } from './core-shared-components/onbase-shared-explorer-search/onbase-shared-explorer-search.component';
+import { OnbaseSharedExplorerDoctypesearchComponent } from './core-shared-components/onbase-shared-explorer-search/onbase-shared-explorer-doctypesearch/onbase-shared-explorer-doctypesearch.component';
 @NgModule({
   declarations: [
     LoginFooterComponent,
@@ -46,6 +48,8 @@ import { RdapSharedConfigSetuptableAddeditComponent } from './core-shared-compon
     RdapSharedConfigSearchComponent,
     RdapSharedBreadcrumbComponent,
     RdapSharedConfigSetuptableAddeditComponent,
+    OnbaseSharedExplorerSearchComponent,
+    OnbaseSharedExplorerDoctypesearchComponent,
   ],
   imports: [
     FormsModule,
@@ -65,12 +69,14 @@ import { RdapSharedConfigSetuptableAddeditComponent } from './core-shared-compon
   SideMenuBarComponent,
   RdapSharedConfigSearchComponent,
   RdapSharedBreadcrumbComponent,
-  RdapSharedConfigSetuptableAddeditComponent
+  RdapSharedConfigSetuptableAddeditComponent,
+  OnbaseSharedExplorerSearchComponent
   ],
   entryComponents:[
     RdapSharedConfigSearchComponent,
     RdapSharedBreadcrumbComponent,
-    RdapSharedConfigSetuptableAddeditComponent
+    RdapSharedConfigSetuptableAddeditComponent,
+    OnbaseSharedExplorerSearchComponent
   ],
   providers: [],
   bootstrap: []

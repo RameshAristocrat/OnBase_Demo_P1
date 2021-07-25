@@ -1,0 +1,16 @@
+[{
+    "id":1,
+    "name": "Document"
+  }, {
+    "id":2,
+    "name": "Status View"
+  }, {
+    "id":3,
+    "name": "Folders"
+  }, {
+    "id":4,
+    "name": "User"
+  }, {
+    "id":5,
+    "name": "Admin"
+  }]

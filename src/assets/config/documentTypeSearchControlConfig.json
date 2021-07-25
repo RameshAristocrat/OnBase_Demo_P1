@@ -1,0 +1,117 @@
+ [{
+    "documenttype":"ACH",    
+    "controls": [{
+            "fieldprop": [{
+                "formcontrolname": "vendorname",
+                "label": "Vendor Name",
+                "type": "select",
+                "api": "assets/config/document.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Vendor Name",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              },
+              {
+                "formcontrolname": "vendornumber",
+                "label": "Vendor Number",
+                "type": "text",
+                "api": "",
+                "required": "required",
+                "placeholder": "Vendor Number",
+                "action": "",
+                "pipe": ""
+              },
+              {
+                "formcontrolname": "opendate",
+                "label": "Open Date",
+                "type": "calendar",
+                "api": "",
+                "required": "required",
+                "placeholder": "Open Date",
+                "action": "",
+                "pipe": ""
+              },{
+                "formcontrolname": "documenttype",
+                "label": "Document Type",
+                "type": "select",
+                "api": "assets/config/document.json",
+                "apidata": "",
+                "required": "required",
+                "placeholder": "Document Type",
+                "action": "",
+                "pipe": "",
+                "bindname": "name",
+                "clearable": false,
+                "virtualScroll": true,
+                "multiple": false
+              },
+              {
+                "formcontrolname": "documentstatus",
+                "label": "Document Status",
+                "type": "text",
+                "api": "",
+                "required": "required",
+                "placeholder": "Document Status",
+                "action": "",
+                "pipe": ""
+              },
+              {
+                "formcontrolname": "documenthandle",
+                "label": "Document Handle",
+                "type": "text",
+                "api": "",
+                "required": "required",
+                "placeholder": "Document Handle",
+                "action": "",
+                "pipe": ""
+              },
+              {
+                "formcontrolname": "trackingdocumenthandle",
+                "label": "Tracking Document Handle",
+                "type": "text",
+                "api": "",
+                "required": "required",
+                "placeholder": "Tracking Document Handle",
+                "action": "",
+                "pipe": ""
+              }
+            ],
+            "api": [{
+              "api": "assets/config/grid-data.json",
+              "apidata": "",
+              "url": "",
+              "param": [{}]
+            }]
+        }]
+    },{
+        "documenttype":"COR",    
+        "controls": [{
+                "fieldprop": [{
+                    "formcontrolname": "vendorname",
+                    "label": "Vendor Name",
+                    "type": "select",
+                    "api": "assets/config/document.json",
+                    "apidata": "",
+                    "required": "required",
+                    "placeholder": "Vendor Name",
+                    "action": "",
+                    "pipe": "",
+                    "bindname": "name",
+                    "clearable": false,
+                    "virtualScroll": true,
+                    "multiple": false
+                  }
+                ],
+                "api": [{
+                  "api": "assets/config/grid-data.json",
+                  "apidata": "",
+                  "url": "",
+                  "param": [{}]
+                }]
+            }]
+        }]

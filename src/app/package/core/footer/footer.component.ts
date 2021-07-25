@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
-  constructor() { }
+clientheight:number;
+  constructor() {
+    this.clientheight = document.documentElement.clientHeight;
+   }
 
   ngOnInit(): void {
   }
