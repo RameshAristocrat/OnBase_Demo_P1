@@ -38,6 +38,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { MatNativeDateModule} from "@angular/material/core";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { FormsModule } from '@angular/forms';
+import { IgxGridModule } from "igniteui-angular";
 //import { IgxGridModule } from 'igniteui-angular';
 @NgModule({
   declarations: [],
@@ -77,6 +78,7 @@ import { FormsModule } from '@angular/forms';
     MatButtonToggleModule,
     MatDividerModule,
     GoogleChartsModule,
+    IgxGridModule,
     //AngularFontAwesomeModule
     //NativeDateAdapter
     NgSelectModule,
@@ -103,7 +105,8 @@ import { FormsModule } from '@angular/forms';
     MatBadgeModule,
     MatSliderModule, MatAutocompleteModule, 
     MatNativeDateModule, 
-    MatIconModule, 
+    MatIconModule,
+    IgxGridModule, 
     //MatOptionModule,
     MatGridListModule, MatTabsModule, MatSnackBarModule, MatExpansionModule, MatProgressBarModule, MatSlideToggleModule, MatStepperModule,
     MatMenuModule,

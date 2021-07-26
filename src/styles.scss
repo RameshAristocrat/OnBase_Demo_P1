@@ -1,3 +1,5 @@
+@import './variables';
+@import './app-layout';
 /* You can add global styles to this file, and also import other style files */
 @import '~material-icons/iconfont/material-icons.css';
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
@@ -48,3 +50,56 @@ body { margin: 0; font-family: 'lato', 'arial', sans-serif; }
 .ng-select.ng-invalid.ng-touched .ng-select-container .ng-placeholder{
   color: red;
 }
+
+.light-theme {
+  @include igx-light-theme($default-palette);
+}
+
+$grays-btn-color: igx-color($green-palette, 'grays', 800);
+
+/* autoprefixer grid: on */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+@include igx-core();
+@include igx-typography();
+@include igx-theme(
+  $palette: $palette,
+  $schema: $schema,
+  $legacy-support: $legacy-support
+);
+
+:root {
+  @include igx-palette-vars($palette);
+}
+
+.light-theme {
+  @include igx-light-theme($palette);
+}
+
+.dark-theme {
+  background: #333;
+  color: #fff;
+  @include igx-dark-theme(
+      $palette: $green-palette,
+      $legacy-support: $legacy-support
+  );
+
+  .grid-chart-contextmenu-wrapper {
+      @include igx-fluent-dark-theme($fluent-excel-palette);
+  }
+}
+
+.fin-dark-theme {
+  @include igx-dark-theme($green-palette);
+  background: #333;
+
+  ::-moz-placeholder {
+      opacity: 1;
+  }
+}
+

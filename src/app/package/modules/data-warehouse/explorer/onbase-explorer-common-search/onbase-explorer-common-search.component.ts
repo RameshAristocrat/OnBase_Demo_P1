@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./onbase-explorer-common-search.component.scss']
 })
 export class OnbaseExplorerCommonSearchComponent implements OnInit {
-
-  constructor() { }
+  panelOpenState;
+  constructor() {
+    this.panelOpenState = true;
+   }
 
   ngOnInit(): void {
+    this.panelOpenState = true;
   }
 
 }

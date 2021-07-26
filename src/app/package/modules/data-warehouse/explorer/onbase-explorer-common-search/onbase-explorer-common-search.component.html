@@ -1,20 +1,33 @@
 <div class="grid-container">
     <!-- <h2 class="mat-h3">{{pageName}}</h2> -->
-    <div style="padding-left: 1%;padding-bottom: 1%;">
-        <mat-card>
-            <mat-card-content>
-                <app-onbase-shared-explorer-search></app-onbase-shared-explorer-search>
-            </mat-card-content>
-            <mat-card-actions style="text-align: left;">
-                <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Search</button>
-                <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Reset</button>
-            </mat-card-actions>
-        </mat-card>
+
+    <div style="padding-left: 1%;padding-bottom: 1%;padding-right:1%;">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title style="font-weight:410;">
+                      Document Search Filter
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-card>
+                    <mat-card-content>
+                        <app-onbase-shared-explorer-search></app-onbase-shared-explorer-search>
+                    </mat-card-content>
+                    <mat-card-actions style="text-align: left;">
+                        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Search</button>
+                        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Reset</button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-expansion-panel>
+        </mat-accordion>
+
     </div>
     <div style="padding-left:1%">
         <mat-card>
             <mat-card-content>
-                <label>Search Result</label>
+                <label style="font-weight:410;">Search Result</label>
+                <app-onbase-shared-explorer-search-results [panelOpenState]="panelOpenState"></app-onbase-shared-explorer-search-results>
             </mat-card-content>
             </mat-card>
     </div>

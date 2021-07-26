@@ -34,6 +34,7 @@ import {
 import { RdapSharedConfigSetuptableAddeditComponent } from './core-shared-components/rdap-shared-config-setuptable-addedit/rdap-shared-config-setuptable-addedit.component';
 import { OnbaseSharedExplorerSearchComponent } from './core-shared-components/onbase-shared-explorer-search/onbase-shared-explorer-search.component';
 import { OnbaseSharedExplorerDoctypesearchComponent } from './core-shared-components/onbase-shared-explorer-search/onbase-shared-explorer-doctypesearch/onbase-shared-explorer-doctypesearch.component';
+import { OnbaseSharedExplorerSearchResultsComponent } from './core-shared-components/onbase-shared-explorer-search/onbase-shared-explorer-search-results/onbase-shared-explorer-search-results.component';
 @NgModule({
   declarations: [
     LoginFooterComponent,
@@ -50,6 +51,7 @@ import { OnbaseSharedExplorerDoctypesearchComponent } from './core-shared-compon
     RdapSharedConfigSetuptableAddeditComponent,
     OnbaseSharedExplorerSearchComponent,
     OnbaseSharedExplorerDoctypesearchComponent,
+    OnbaseSharedExplorerSearchResultsComponent,
   ],
   imports: [
     FormsModule,
@@ -70,13 +72,15 @@ import { OnbaseSharedExplorerDoctypesearchComponent } from './core-shared-compon
   RdapSharedConfigSearchComponent,
   RdapSharedBreadcrumbComponent,
   RdapSharedConfigSetuptableAddeditComponent,
-  OnbaseSharedExplorerSearchComponent
+  OnbaseSharedExplorerSearchComponent,
+  OnbaseSharedExplorerSearchResultsComponent
   ],
   entryComponents:[
     RdapSharedConfigSearchComponent,
     RdapSharedBreadcrumbComponent,
     RdapSharedConfigSetuptableAddeditComponent,
-    OnbaseSharedExplorerSearchComponent
+    OnbaseSharedExplorerSearchComponent,
+    OnbaseSharedExplorerSearchResultsComponent
   ],
   providers: [],
   bootstrap: []

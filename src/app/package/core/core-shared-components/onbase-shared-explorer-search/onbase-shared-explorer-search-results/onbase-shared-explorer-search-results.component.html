@@ -1,0 +1,16 @@
+<div class="grid__wrapper">
+    <igx-grid #grid [data]="data"
+     [paging]="true" [perPage]="5"
+      height="300px" width="100%" 
+      [allowFiltering]="true" 
+      [filterMode]="'excelStyleFilter'">
+        <igx-column  field="CompanyName" header="Product Name" [sortable]="true" [dataType]="'string'">
+            <ng-template igxCell let-cell="cell" let-val>
+                <a>{{val}}</a>
+            </ng-template>
+        </igx-column>
+        <igx-column  field="ContactName" [hidden]="true" header="Contact Name" [sortable]="true" [dataType]="'string'"></igx-column>
+        <igx-column  field="ContactTitle" [selectable]="false" header="Contact Title" [sortable]="true" [dataType]="'string'"></igx-column>
+        <igx-column field="ID" header="ID" [sortable]="true" [searchable]="true" [dataType]="'string'"></igx-column>
+    </igx-grid>
+</div>
