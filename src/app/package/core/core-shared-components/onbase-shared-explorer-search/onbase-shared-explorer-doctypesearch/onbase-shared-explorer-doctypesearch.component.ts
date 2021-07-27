@@ -55,15 +55,15 @@ export class OnbaseSharedExplorerDoctypesearchComponent implements OnInit, OnCha
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   @Input() selbasedoctype;
+  @Output() doctypesearchemitter = new EventEmitter<any>();
   constructor(private httpClient: HttpClient, location: Location, private _router: Router,
     public fb: FormBuilder, private _snackBar: MatSnackBar,  private cd: ChangeDetectorRef) {
     this.httpClient.get("assets/config/documentTypeSearchControlConfig.json").subscribe(data => {
-      debugger
       this.explorerDocTypData = data;
       this.getDoctypeSearchFormData(this.selbasedoctype);
     });
    }
-
+//this.onSearchSumbit.emit(this.formGroupArr);
   ngOnInit(): void {
   }
   ngOnChanges() {
@@ -107,6 +107,10 @@ export class OnbaseSharedExplorerDoctypesearchComponent implements OnInit, OnCha
 
     });
     this.doctypesearchform = new FormGroup(frmgrp);
+  }
+
+  fieldControlEvent(event){
+    this.doctypesearchemitter.emit(this.doctypesearchform);
   }
 
 }

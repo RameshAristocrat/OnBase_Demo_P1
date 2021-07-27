@@ -53,6 +53,6 @@
         </div>
     </mat-card-content>
 </mat-card>
-<app-onbase-shared-explorer-doctypesearch *ngIf="selbasedoctype" [selbasedoctype]="selbasedoctype">
+<app-onbase-shared-explorer-doctypesearch *ngIf="selbasedoctype" [selbasedoctype]="selbasedoctype" (doctypesearchemitter)="doctypesearchemitter($event)">
 
 </app-onbase-shared-explorer-doctypesearch>

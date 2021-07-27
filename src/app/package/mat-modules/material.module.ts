@@ -39,6 +39,13 @@ import { MatNativeDateModule} from "@angular/material/core";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { FormsModule } from '@angular/forms';
 import { IgxGridModule } from "igniteui-angular";
+import { 
+	IgxButtonModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxRippleModule,
+	IgxChipsModule
+ } from "igniteui-angular";
 //import { IgxGridModule } from 'igniteui-angular';
 @NgModule({
   declarations: [],
@@ -79,6 +86,11 @@ import { IgxGridModule } from "igniteui-angular";
     MatDividerModule,
     GoogleChartsModule,
     IgxGridModule,
+    IgxButtonModule,
+    IgxIconModule,
+    IgxInputGroupModule,
+    IgxRippleModule,
+    IgxChipsModule,
     //AngularFontAwesomeModule
     //NativeDateAdapter
     NgSelectModule,

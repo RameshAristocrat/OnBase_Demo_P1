@@ -3,7 +3,7 @@
 
     <div style="padding-left: 1%;padding-bottom: 1%;padding-right:1%;">
         <mat-accordion>
-            <mat-expansion-panel (opened)="panelOpenState = true"
+            <mat-expansion-panel [expanded]="true" (opened)="panelOpenState = true"
             (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                     <mat-panel-title style="font-weight:410;">
@@ -12,10 +12,12 @@
                 </mat-expansion-panel-header>
                 <mat-card>
                     <mat-card-content>
-                        <app-onbase-shared-explorer-search></app-onbase-shared-explorer-search>
+                        <app-onbase-shared-explorer-search (searchfilterdata)="searchfilterdata($event)"></app-onbase-shared-explorer-search>
                     </mat-card-content>
                     <mat-card-actions style="text-align: left;">
-                        <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Search</button>
+                        <button mat-raised-button 
+                        style="width: 10%;background-color: #300c46;color:white"
+                        (click)="searcSubmit()">Search</button>
                         <button mat-raised-button style="width: 10%;background-color: #300c46;color:white">Reset</button>
                     </mat-card-actions>
                 </mat-card>
@@ -27,7 +29,7 @@
         <mat-card>
             <mat-card-content>
                 <label style="font-weight:410;">Search Result</label>
-                <app-onbase-shared-explorer-search-results [panelOpenState]="panelOpenState"></app-onbase-shared-explorer-search-results>
+                <app-onbase-shared-explorer-search-results [searchGridData]="searchGridData"></app-onbase-shared-explorer-search-results>
             </mat-card-content>
             </mat-card>
     </div>

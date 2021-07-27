@@ -1,0 +1,9 @@
+[{"modelname":"document", "title":"Document"},
+    {"modelname":"vendorname", "title":"Vendor Name"},
+    {"modelname":"vendornumber", "title":"Vendor Number"},
+    {"modelname":"opendate", "title":"Open Date"},
+    {"modelname":"documenttype", "title":"Document Type"},
+    {"modelname":"documentstatus", "title":"Document Status"},
+    {"modelname":"documenthandle", "title":"Document Handle"},
+    {"modelname":"trackingdocumenthandle", "title":"Tracking Document Handle"}
+]

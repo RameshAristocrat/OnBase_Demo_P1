@@ -51,15 +51,17 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
   displayedColumns: string[];
   loopGridContent: any[];
   routers: Router;
-  selbasedoctype:any;
+  selbasedoctype: any;
   //= ['select', 'position'];
 
   //dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  @Output() searchfilterdata = new EventEmitter<any>();
   constructor(private httpClient: HttpClient, location: Location, private _router: Router,
-    public fb: FormBuilder, private _snackBar: MatSnackBar,  private cd: ChangeDetectorRef) {
+    public fb: FormBuilder, private _snackBar: MatSnackBar, private cd: ChangeDetectorRef) {
     this.httpClient.get("assets/config/baseSearchControlConfig.json").subscribe(data => {
       this.configdata = data;
       this.getBaseSearchFormData();
@@ -68,7 +70,7 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
       this.basesearchform.controls['documenttypegroup'].setValue(1);
       this.basesearchform.controls['basedocumenttype'].setValue("ACH");
       console.log(this.basesearchform.get('basedocumenttype').value)
-      this.selbasedoctype=this.basesearchform.get('basedocumenttype').value;
+      this.selbasedoctype = this.basesearchform.get('basedocumenttype').value;
     });
   }
 
@@ -78,7 +80,7 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
     return this.doctypesearchform.controls[controlName].hasError(errorName);
   }
   public baseSearchOnChange = () => {
-    this.selbasedoctype=this.basesearchform.get('basedocumenttype').value;
+    this.selbasedoctype = this.basesearchform.get('basedocumenttype').value;
     this.cd.detectChanges();
   }
 
@@ -111,6 +113,8 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
     });
     this.basesearchform = new FormGroup(frmgrp);
   }
-
+  doctypesearchemitter(event) {
+    this.searchfilterdata.emit({ doctypesearchform: event, basesearchform: this.basesearchform })
+  }
 
 }

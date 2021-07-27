@@ -11,7 +11,10 @@
                                     class="compulsary-mark">*</span>
                             </mat-label>
                             <input type="text" matInput name='{{item.controlname}}'
-                                formControlName="{{item.formcontrolname}}" [disabled]="false" />
+                                formControlName="{{item.formcontrolname}}" 
+                                [disabled]="false"
+                                onblur="fieldControlEvent($event)" 
+                                />
                             <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error>
                         </mat-form-field>
@@ -24,7 +27,8 @@
                             <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                                 cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" name="{{item.controlname}}"
                                 formControlName="{{item.formcontrolname}}"
-                                placeholder="{{item.placeholder}}"></textarea>
+                                placeholder="{{item.placeholder}}"
+                                onblur="fieldControlEvent($event)"></textarea>
                             <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error>
                         </mat-form-field>
@@ -33,7 +37,8 @@
                                 <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
                                     bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
                                     [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
-                                    [multiple]="item.multiple" appendTo="body" required>
+                                    [multiple]="item.multiple" appendTo="body" required
+                                    [change]="fieldControlEvent($event)">
                                     <ng-template ng-option-tmp let-item="item">
                                         {{item.name}}
                                     </ng-template>
@@ -44,7 +49,9 @@
                         </div>
                         <mat-form-field *ngIf="item.type =='calendar'">
                             <mat-label>{{item.label}}</mat-label>
-                            <input matInput [matDatepicker]="picker" formControlName="{{item.formcontrolname}}" appendTo="body">
+                            <input matInput [matDatepicker]="picker" 
+                            formControlName="{{item.formcontrolname}}" appendTo="body"
+                            onblur="fieldControlEvent($event)">
                             <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                             <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
