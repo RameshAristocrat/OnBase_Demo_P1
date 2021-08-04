@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { OktaAuthService } from 'src/app/package/core/okta-auth/okta-auth-service';
 
 @Component({
   selector: 'app-onbase-explorer-common-search',
@@ -16,11 +17,12 @@ export class OnbaseExplorerCommonSearchComponent implements OnInit {
   searchGridData:any;
   gridsource: any[];
   constructor(private httpClient: HttpClient, location: Location, private _router: Router,
-    public fb: FormBuilder,private _snackBar: MatSnackBar) {
+    public fb: FormBuilder,private _snackBar: MatSnackBar,private okta:OktaAuthService) {
     this.panelOpenState = true;
   }
 
   ngOnInit(): void {
+    //this.okta.handleAuthentication();
     this.panelOpenState = true;
   }
 

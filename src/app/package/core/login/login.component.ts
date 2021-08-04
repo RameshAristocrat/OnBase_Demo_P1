@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { isNotEmptyString } from '../../core/utils/shared-utils';
+import { OktaAuthService } from '../okta-auth/okta-auth-service';
 
 @Component({
   selector: 'app-login',
@@ -15,12 +16,14 @@ export class LoginComponent implements OnInit {
     public fb: FormBuilder,
     public router: Router,
     public route: ActivatedRoute,
-    private dialog: MatDialog,) {    
+    private dialog: MatDialog,
+    private okta: OktaAuthService) {    
 
 }
 
   ngOnInit(): void {
-    this.createFormGroup();
+    this.okta.handleAuthentication();
+    //this.createFormGroup();
   }
 
   createFormGroup() {

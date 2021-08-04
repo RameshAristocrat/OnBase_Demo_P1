@@ -1,4 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
+import { OktaAuthGuard } from '../../core/okta-auth/okta-auth-guard';
 import { OnbaseExplorerCommonSearchComponent } from './explorer/onbase-explorer-common-search/onbase-explorer-common-search.component';
 const routes: Routes = [
     {

@@ -1,0 +1,13 @@
+:host::ng-deep .igx-paginator__select{
+    display: none !important;
+}
+
+
+:host {
+    ::ng-deep {
+        .igx-grid__td {
+            font-size: 0.7rem;
+            min-height: 1rem;
+		}
+	}
+}

@@ -130,6 +130,12 @@ import {
     MatButtonToggleModule,
     MatDividerModule,
     GoogleChartsModule,
+    IgxGridModule,
+    IgxButtonModule,
+    IgxIconModule,
+    IgxInputGroupModule,
+    IgxRippleModule,
+    IgxChipsModule,
     //FontAwesomeModule
     //NativeDateAdapter
     NgSelectModule,

@@ -30,7 +30,11 @@
                         </mat-form-field>
                         <div class="form-group" *ngIf="item.type =='select'">
                             <fieldset class="form-group">
-                                <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
+                                <ng-select 
+                                class="required"
+                                labelForId="{{item.label}}" 
+                                [items]="item.apidata" 
+                                placeholder="{{item.placeholder}}    *"
                                     bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
                                     bindValue="id"
                                     [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"

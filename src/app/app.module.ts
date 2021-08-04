@@ -25,12 +25,7 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    //SlimScroll,
-    //RdapExtraPinRequestDropdownComponent,
-    //RdapSearchSharedComponent,
-    //StudioComponent,
-    // RDAPExtraPINRequestComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

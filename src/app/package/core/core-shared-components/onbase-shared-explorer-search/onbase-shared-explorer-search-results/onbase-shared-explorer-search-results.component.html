@@ -39,10 +39,14 @@
         </igx-suffix>
     </igx-input-group>
     <igx-grid igxPreventDocumentScroll #grid1 id="grid1" [data]="data"
-     [paging]="true" [perPage]="5"
-      height="450px" width="100%" 
+     [paging]="true" [perPage]="25" [rowHeight]="25"
+     height="850px"
+      width="100%" 
       [allowFiltering]="true">
-      <igx-column *ngFor="let c of columndata" [sortable]="true" [width]="c.width" [filterable]="true" [field]="c.field" [header]="c.title|titlecase" [dataType]="c.type">
+      <igx-column *ngFor="let c of columndata" 
+      [sortable]="true" 
+      [width]="c.width" 
+      [filterable]="true" [field]="c.field" [header]="c.title|titlecase" [dataType]="c.type">
         <ng-template *ngIf="c.field == 'document'" igxCell let-cell="cell" let-val>
             <a>{{val}}</a>
         </ng-template>

@@ -6,8 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { LauncherComponent } from './launcher/launcher.component';
 import { DBoardComponent } from './d-board/d-board.component';
 import { DatatableComponent } from './components/datatable/datatable.component';
+import { OktaAuthGuard } from './okta-auth/okta-auth-guard';
+import { RdOktaCallbackComponent } from './okta-auth/rd-okta-callback/rd-okta-callback.component';
 
 const routes: Routes = [
+  {
+    path: "login",
+    component: LoginComponent,
+    canActivate:[OktaAuthGuard]
+  },
   {
     path: "home",
     component: HomeComponent,

@@ -29,6 +29,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material/list": "^11.0.0",
     "@ng-select/ng-select": "^7.0.0",
+    "@okta/okta-auth-js": "^5.2.3",
     "angular-google-charts": "^2.2.1",
     "bootstrap": "^5.0.1",
     "classlist.js": "^1.1.20150312",

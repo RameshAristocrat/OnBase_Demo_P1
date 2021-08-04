@@ -27,7 +27,7 @@ export class OnbaseSharedExplorerSearchResultsComponent implements OnInit, After
 
   ngOnInit(): void {
     
-    
+    this.gridDataLoad();
   }
   ngOnChanges() {
     this.gridDataLoad();
@@ -47,7 +47,7 @@ public gridDataLoad(){
       console.log(x);
       this.appString.filter(g =>{
         if(x==g.modelname){
-          this.columndata.push({ field:x, title:g.title, width: "200px", type: "string", pinned: true });
+          this.columndata.push({ field:x, title:g.title, width: "150px", height:"10px", type: "string", pinned: true });
         }
       });
      this.loopGridContent.push({"title":x,"data":("element."+x)});
