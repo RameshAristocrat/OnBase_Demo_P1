@@ -5,5 +5,14 @@
     {"modelname":"documenttype", "title":"Document Type"},
     {"modelname":"documentstatus", "title":"Document Status"},
     {"modelname":"documenthandle", "title":"Document Handle"},
-    {"modelname":"trackingdocumenthandle", "title":"Tracking Document Handle"}
+    {"modelname":"trackingdocumenthandle", "title":"Tracking Document Handle"},
+    {"modelname":"document_Name", "title":"Document"},
+    {"modelname":"document_Url", "title":"Url"},
+    {"modelname":"vendor_Name", "title":"Vendor Name"},
+    {"modelname":"vendor_Number", "title":"Vendor Number"},
+    {"modelname":"open_Date", "title":"Open Date"},
+    {"modelname":"document_Type", "title":"Document Type"},
+    {"modelname":"document_Status", "title":"Document Status"},
+    {"modelname":"document_Handle", "title":"Document Handle"},
+    {"modelname":"tracking_Document", "title":"Tracking Document"}
 ]

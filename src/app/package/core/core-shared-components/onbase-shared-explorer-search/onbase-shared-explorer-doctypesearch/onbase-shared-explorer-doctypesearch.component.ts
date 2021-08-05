@@ -29,6 +29,7 @@ export class OnbaseSharedExplorerDoctypesearchComponent implements OnInit, OnCha
   public basesearch;
   public doctypesearch;
   public explorerDocTypData;
+  public apiConfigData;
 
   timeOut = 500;
 

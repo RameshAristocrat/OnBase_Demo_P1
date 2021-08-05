@@ -32,7 +32,22 @@
                             <!-- <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error> -->
                         </mat-form-field>
-                        <div class="form-group" *ngIf="item.type =='select'">
+                        <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname == 'Vendor_Name'">
+                            <fieldset class="form-group">
+                                <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
+                                    bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
+                                    [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
+                                    [multiple]="item.multiple" appendTo="body"
+                                    [change]="fieldControlEvent($event)">
+                                    <ng-template ng-option-tmp let-item="item">
+                                        {{item.id}}-{{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                            </fieldset>
+                            <!-- <mat-error *ngIf="item.type =='select' && checkError(item.formcontrolname, item.required)">
+                                {{item.label}} required</mat-error> -->
+                        </div>
+                        <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname != 'Vendor_Name'">
                             <fieldset class="form-group">
                                 <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
                                     bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"

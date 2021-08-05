@@ -2,10 +2,10 @@
     "documenttype":"ACH",    
     "controls": [{
             "fieldprop": [{
-                "formcontrolname": "vendorname",
+                "formcontrolname": "Vendor_Name",
                 "label": "Vendor Name",
                 "type": "select",
-                "api": "assets/config/document.json",
+                "api": "assets/config/vendorname.json",
                 "apidata": "",
                 "required": "required",
                 "placeholder": "Vendor Name",
@@ -17,7 +17,7 @@
                 "multiple": false
               },
               {
-                "formcontrolname": "vendornumber",
+                "formcontrolname": "Vendor_Number",
                 "label": "Vendor Number",
                 "type": "text",
                 "api": "",
@@ -27,7 +27,7 @@
                 "pipe": ""
               },
               {
-                "formcontrolname": "opendate",
+                "formcontrolname": "Open_Date",
                 "label": "Open Date",
                 "type": "calendar",
                 "api": "",
@@ -36,7 +36,7 @@
                 "action": "",
                 "pipe": ""
               },{
-                "formcontrolname": "documenttype",
+                "formcontrolname": "Document_Type",
                 "label": "Document Type",
                 "type": "select",
                 "api": "assets/config/document.json",
@@ -51,7 +51,7 @@
                 "multiple": false
               },
               {
-                "formcontrolname": "documentstatus",
+                "formcontrolname": "Document_Status",
                 "label": "Document Status",
                 "type": "text",
                 "api": "",
@@ -61,7 +61,7 @@
                 "pipe": ""
               },
               {
-                "formcontrolname": "documenthandle",
+                "formcontrolname": "Document_Handle",
                 "label": "Document Handle",
                 "type": "text",
                 "api": "",
@@ -71,7 +71,7 @@
                 "pipe": ""
               },
               {
-                "formcontrolname": "trackingdocumenthandle",
+                "formcontrolname": "Tracking_Document_Handle",
                 "label": "Tracking Document Handle",
                 "type": "text",
                 "api": "",
@@ -92,10 +92,10 @@
         "documenttype":"COR",    
         "controls": [{
                 "fieldprop": [{
-                    "formcontrolname": "vendorname",
+                    "formcontrolname": "Vendor_Name",
                     "label": "Vendor Name",
                     "type": "select",
-                    "api": "assets/config/document.json",
+                    "api": "assets/config/vendorname.json",
                     "apidata": "",
                     "required": "required",
                     "placeholder": "Vendor Name",

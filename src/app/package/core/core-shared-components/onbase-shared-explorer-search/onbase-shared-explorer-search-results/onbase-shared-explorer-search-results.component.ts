@@ -40,11 +40,8 @@ export class OnbaseSharedExplorerSearchResultsComponent implements OnInit, After
 public gridDataLoad(){
   this.columndata=[];
   this.loopGridContent=[];
-    console.log("this.searchgriddata",this.searchGridData);
-    console.log(this.appString);
     this.data = this.searchGridData;
     Object.keys(this.searchGridData[0]).forEach(x =>{
-      console.log(x);
       this.appString.filter(g =>{
         if(x==g.modelname){
           this.columndata.push({ field:x, title:g.title, width: "150px", height:"10px", type: "string", pinned: true });

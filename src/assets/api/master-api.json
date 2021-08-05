@@ -1,0 +1,42 @@
+[
+    {
+        "documenttype": "ACH",
+        "endpoint": "https://localhost:9091/v1/search",
+        "param": [
+            {
+                "Page_Size": 10,
+                "Page_Nbr": 1,
+                "Document_Type": "",
+                "Document_Type_Group": "",
+                "Document_List": "",
+                "Document": "",
+                "Vendor_Name": "",
+                "Vendor_Number": "",
+                "Open_Date": "",
+                "Document_Status": "",
+                "Document_Handle": "",
+                "Tracking_Document_Handle": ""
+            }
+        ]
+    },
+    {
+        "documenttype": "COR",
+        "endpoint": "https://localhost:9091/v1/search",
+        "param": [
+            {
+                "Page_Size": 10,
+                "Page_Nbr": 1,
+                "Document_Type": "",
+                "Document_Type_Group": "",
+                "Document_List": "",
+                "Document": "",
+                "Vendor_Name": "",
+                "Vendor_Number": "",
+                "Open_Date": "",
+                "Document_Status": "",
+                "Document_Handle": "",
+                "Tracking_Document_Handle": ""
+            }
+        ]
+    }
+]
