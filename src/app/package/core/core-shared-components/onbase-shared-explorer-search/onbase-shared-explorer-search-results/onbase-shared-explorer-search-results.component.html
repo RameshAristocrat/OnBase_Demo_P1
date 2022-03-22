@@ -1,55 +1,52 @@
 <div class="grid__wrapper" *ngIf="searchGridData">
-    <igx-input-group type="search" class="offset" style="padding-bottom: 1%;">
-        <igx-prefix>
-            <igx-icon *ngIf="searchText.length === 0">search</igx-icon>
-            <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()">clear</igx-icon>
-        </igx-prefix>
-
-        <input #search1 id="search1" igxInput placeholder="Search" [(ngModel)]="searchText" (ngModelChange)="grid.findNext(searchText, caseSensitive, exactMatch)"
-            (keydown)="searchKeyDown($event)" />
-
-        <igx-suffix *ngIf="searchText.length > 0">
-            <div class="resultsText" *ngIf="grid.lastSearchInfo">
-                <span *ngIf="grid.lastSearchInfo.matchInfoCache.length > 0">
-                    {{ grid.lastSearchInfo.activeMatchIndex + 1 }} of {{ grid.lastSearchInfo.matchInfoCache.length }}
-                    results
-                </span>
-                <span *ngIf="grid.lastSearchInfo.matchInfoCache.length === 0">
-                    No results
-                </span>
-            </div>
-            <div class="chips">
-                <igx-chips-area>
-                    <igx-chip (click)="updateSearch()" [color]="caseSensitive? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
-                        <span>Case Sensitive</span>
-                    </igx-chip>
-                    <igx-chip (click)="updateExactSearch()" [color]="exactMatch? 'lightgrey' : 'rgba(0, 0, 0, .04)'">
-                        <span>Exact Match</span>
-                    </igx-chip>
-                </igx-chips-area>
-            </div>
-            <div class="searchButtons">
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findPrev(searchText, caseSensitive, exactMatch)">
-                    <igx-icon family="material">navigate_before</igx-icon>
-                </button>
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="grid.findNext(searchText, caseSensitive, exactMatch)">
-                    <igx-icon family="material">navigate_next</igx-icon>
-                </button>
-            </div>
-        </igx-suffix>
-    </igx-input-group>
-    <igx-grid igxPreventDocumentScroll #grid1 id="grid1" [data]="data"
-     [paging]="true" [perPage]="25" [rowHeight]="25"
-     height="850px"
-      width="100%" 
-      [allowFiltering]="true">
-      <igx-column *ngFor="let c of columndata" 
-      [sortable]="true" 
-      [width]="c.width" 
-      [filterable]="true" [field]="c.field" [header]="c.title|titlecase" [dataType]="c.type">
-        <ng-template *ngIf="c.field == 'document'" igxCell let-cell="cell" let-val>
-            <a>{{val}}</a>
-        </ng-template>
-    </igx-column>
+ <igx-grid igxPreventDocumentScroll #grid1 id="grid1" 
+    [data]="data" 
+    [rowSelection]="'multiple'" 
+    [paging]="true"
+        [perPage]="10" 
+        [rowHeight]="25" 
+        height="auto" 
+        width="100%" 
+        [allowFiltering]="true"       
+        (rowSelected)="handleRowSelection($event)">
+        <igx-grid-toolbar>
+            <igx-grid-toolbar-actions>
+                <!-- <igx-grid-toolbar-exporter [exportExcel]="true" [exportCSV]="true">
+                </igx-grid-toolbar-exporter> -->
+                <app-export-grid [grid1]="grid1">
+                </app-export-grid>
+                <!-- <button (click)="exportclicked()">Export Data</button><br /> -->
+                <!-- <igx-select #select (selectionChanging)="exportclicked($event,cell,data)"
+                [placeholder]="'Data Export'">
+                    <igx-select-item [value]="'xls'">
+                        Export Excel
+                    </igx-select-item>
+                    <igx-select-item [value]="'csv'">
+                        Export CSV
+                    </igx-select-item>
+                </igx-select> -->
+            </igx-grid-toolbar-actions>
+        </igx-grid-toolbar>
+        <igx-paginator [perPage]="10"></igx-paginator>
+        <igx-column *ngFor="let c of columndata" [sortable]="true" [width]="c.width" [filterable]="true"
+            [field]="c.field" [header]="c.title|titlecase" [resizable]="true"  [dataType]="c.type" [hidden]="c.hidden">
+            <ng-template *ngIf="c.field == 'document_Url'" igxCell let-cell="cell" let-val>
+                <a href="{{convertDocUrl(val)}}" target="_blank" 
+                style="cursor:pointer"(click)="openDocUrl(val);" download="{{convertDocUrl(val)}}">
+                    {{getRecency(val)}}
+                </a>
+              </ng-template>
+            <!-- <ng-template *ngIf="c.field == 'document_Url'" igxCell let-cell="cell" let-val>
+                <a href='{{val}}' target="_blank">{{val}}</a>
+            </ng-template> -->
+        </igx-column>
     </igx-grid>
+    <div class="row" style="padding-top: 5px !important;" *ngIf="downloadflag == true">
+        <div class="col-lg-12">
+            <button mat-raised-button 
+            style="width: 10%;background-color: #300c46;color:white"
+            (click)="submitDownload()">
+            Download</button>
+        </div>
+    </div>
 </div>

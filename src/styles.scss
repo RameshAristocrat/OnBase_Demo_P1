@@ -50,7 +50,14 @@ body { margin: 0; font-family: 'lato', 'arial', sans-serif; }
 .ng-select.ng-invalid.ng-touched .ng-select-container .ng-placeholder{
   color: red;
 }
-
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option{
+  font-size: 12px !important;
+}
+.mat-expansion-panel-header {
+  font-family: Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
+}
 .light-theme {
   @include igx-light-theme($default-palette);
 }

@@ -16,12 +16,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 //import { StudioComponent } from './package/modules/configs/setup-tables/studio/studio.component';
 //import { RDAPExtraPINRequestComponent } from './package/modules/rdap-extra-pin-request/rdap-extra-pin-request.component';
 //import { DashboardComponent } from './package/launch-pad/components/dashboard/dashboard.component';
-const config = {
-  issuer: 'https://aristocrat.okta.com',
-  redirectUri: 'http://sydc-appdev-01:8080/home',
-  clientId: '0oa9t7ifubUwIhATi357',
-  scope: 'openid'
-};
 @NgModule({
   declarations: [
     AppComponent,

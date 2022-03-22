@@ -1,5 +1,5 @@
 <mat-card style="margin-bottom:1%;">
-    <mat-card-content>    
+    <mat-card-content>
         <div class="col-lg-12">
             <form *ngIf="doctypesearchform" action="" [formGroup]="doctypesearchform">
                 <div class="row">
@@ -11,10 +11,8 @@
                                     class="compulsary-mark">*</span> -->
                             </mat-label>
                             <input type="text" matInput name='{{item.controlname}}'
-                                formControlName="{{item.formcontrolname}}" 
-                                [disabled]="false"
-                                onblur="fieldControlEvent($event)" 
-                                />
+                                formControlName="{{item.formcontrolname}}" [disabled]="false"
+                                (blur)="fieldControlEvent($event)" />
                             <!-- <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error> -->
                         </mat-form-field>
@@ -26,21 +24,20 @@
                             </mat-label>
                             <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                                 cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" name="{{item.controlname}}"
-                                formControlName="{{item.formcontrolname}}"
-                                placeholder="{{item.placeholder}}"
-                                onblur="fieldControlEvent($event)"></textarea>
+                                formControlName="{{item.formcontrolname}}" placeholder="{{item.placeholder}}"
+                                (blur)="fieldControlEvent($event)"></textarea>
                             <!-- <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error> -->
                         </mat-form-field>
                         <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname == 'Vendor_Name'">
                             <fieldset class="form-group">
-                                <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
-                                    bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
-                                    [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
-                                    [multiple]="item.multiple" appendTo="body"
-                                    [change]="fieldControlEvent($event)">
+                                <ng-select labelForId="{{item.label}}" [items]="vendorData"
+                                    placeholder="{{item.placeholder}}" bindLabel="{{item.bindname}}"
+                                    formControlName="{{item.formcontrolname}}" [clearable]="item.clearable"
+                                    [virtualScroll]="item.virtualScroll" [multiple]="item.multiple" appendTo="body"
+                                    [change]="fieldControlEvent($event,item.label)">
                                     <ng-template ng-option-tmp let-item="item">
-                                        {{item.id}}-{{item.name}}
+                                        {{item.description}}
                                     </ng-template>
                                 </ng-select>
                             </fieldset>
@@ -49,11 +46,11 @@
                         </div>
                         <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname != 'Vendor_Name'">
                             <fieldset class="form-group">
-                                <ng-select labelForId="{{item.label}}" [items]="item.apidata" placeholder="{{item.placeholder}}"
-                                    bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
-                                    [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
-                                    [multiple]="item.multiple" appendTo="body"
-                                    [change]="fieldControlEvent($event)">
+                                <ng-select labelForId="{{item.label}}" [items]="item.apidata"
+                                    placeholder="{{item.placeholder}}" bindLabel="{{item.bindname}}"
+                                    formControlName="{{item.formcontrolname}}" [clearable]="item.clearable"
+                                    [virtualScroll]="item.virtualScroll" [multiple]="item.multiple" appendTo="body"
+                                    [change]="fieldControlEvent($event,item.label)">
                                     <ng-template ng-option-tmp let-item="item">
                                         {{item.name}}
                                     </ng-template>
@@ -64,17 +61,18 @@
                         </div>
                         <mat-form-field *ngIf="item.type =='calendar'">
                             <mat-label>{{item.label}}</mat-label>
-                            <input matInput [matDatepicker]="picker" 
-                            formControlName="{{item.formcontrolname}}" appendTo="body"
-                            onblur="fieldControlEvent($event)">
-                            <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                            <input matInput [matDatepicker]="picker" formControlName="{{item.formcontrolname}}"
+                                appendTo="body" (dateChange)="onDateChange($event,item.label)">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                             <mat-datepicker #picker></mat-datepicker>
                             <!-- <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error> -->
-                          </mat-form-field>
+                        </mat-form-field>
                     </div>
                 </div>
             </form>
         </div>
     </mat-card-content>
 </mat-card>
+<igx-dialog #alert title="ONBASE" message="{{message}}" leftButtonLabel="OK"
+(leftButtonSelect)="onDialogSubmit($event)"></igx-dialog>

@@ -1,5 +1,5 @@
  [{
-    "documenttype":"ACH",    
+    "documenttype":"170",    
     "controls": [{
             "fieldprop": [{
                 "formcontrolname": "Vendor_Name",

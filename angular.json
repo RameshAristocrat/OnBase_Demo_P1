@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"RDAP": {
+		"ONBASE": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/RDAP",
+						"outputPath": "dist/ONBASE",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -66,25 +66,114 @@
 									"maximumError": "20kb"
 								}
 							]
-						}
+						},"qa": {
+							"fileReplacements": [
+							  {
+								"replace": "src/environments/environment.ts",
+								"with": "src/environments/environment.qa.ts"
+							  }
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "4mb",
+									"maximumError": "10mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "12kb",
+									"maximumError": "20kb"
+								}
+							]
+						  },"dev": {
+							"fileReplacements": [
+							  {
+								"replace": "src/environments/environment.ts",
+								"with": "src/environments/environment.dev.ts"
+							  }
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "4mb",
+									"maximumError": "10mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "12kb",
+									"maximumError": "20kb"
+								}
+							]
+						  },"stag": {
+							"fileReplacements": [
+							  {
+								"replace": "src/environments/environment.ts",
+								"with": "src/environments/environment.stag.ts"
+							  }
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"namedChunks": false,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true,
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "4mb",
+									"maximumError": "10mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "12kb",
+									"maximumError": "20kb"
+								}
+							]
+						  }
 					},
 					"defaultConfiguration": ""
 				},
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"options": {
-						"browserTarget": "RDAP:build"
+						"browserTarget": "ONBASE:build",
+						"sslKey": "C:/certificates/sydc-appdev-01.key",
+						"sslCert": "C:/certificates/sydc-appdev-01.crt"
 					},
 					"configurations": {
 						"production": {
-							"browserTarget": "RDAP:build:production"
+							"browserTarget": "ONBASE:build:production"
+						},
+						"qa": {
+							"browserTarget": "ONBASE:build:qa"
+						},
+						"dev": {
+							"browserTarget": "ONBASE:build:dev"
+						},
+						"stag": {
+							"browserTarget": "ONBASE:build:stag"
 						}
 					}
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "RDAP:build"
+						"browserTarget": "ONBASE:build"
 					}
 				},
 				"test": {
@@ -123,18 +212,27 @@
 					"builder": "@angular-devkit/build-angular:protractor",
 					"options": {
 						"protractorConfig": "e2e/protractor.conf.js",
-						"devServerTarget": "RDAP:serve"
+						"devServerTarget": "ONBASE:serve"
 					},
 					"configurations": {
 						"production": {
-							"devServerTarget": "RDAP:serve:production"
+							"devServerTarget": "ONBASE:serve:production"
+						},
+						"qa": {
+							"devServerTarget": "ONBASE:serve:qa"
+						},
+						"dev": {
+							"devServerTarget": "ONBASE:serve:dev"
+						},
+						"stag": {
+							"devServerTarget": "ONBASE:serve:stag"
 						}
 					}
 				}
 			}
 		}
 	},
-	"defaultProject": "RDAP",
+	"defaultProject": "ONBASE",
 	"cli": {
 		"analytics": "03d0604b-3517-47d6-95ec-65eb1e7bf4e2"
 	}

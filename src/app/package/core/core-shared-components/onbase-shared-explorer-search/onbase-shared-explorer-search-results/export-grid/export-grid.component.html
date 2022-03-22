@@ -1,0 +1,12 @@
+<igx-select #select (selectionChanging)="exportclicked($event)"
+                [placeholder]="'Data Export'" [(ngModel)]="selected">
+                <igx-suffix *ngIf="selected">
+                    <igx-icon (click)="clearSelection($event)">clear</igx-icon>
+                </igx-suffix>
+                    <igx-select-item [value]="'xls'">
+                        Export Excel
+                    </igx-select-item>
+                    <igx-select-item [value]="'csv'">
+                        Export CSV
+                    </igx-select-item>
+                </igx-select>

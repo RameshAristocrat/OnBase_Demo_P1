@@ -12,3 +12,64 @@
         margin-top: 0.9em !important;
     }
 }
+
+.mat-card {
+    background: #fff;
+    //color: rgb(174 171 171);
+}
+
+.mat-card-header .mat-card-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+input, select, textarea, label, ng-select {
+  font-size: 8px;
+  }
+
+  span{
+    font-size:14px;
+  }
+
+  :host::ng-deep.igx-date-picker__input-date igx-input-group__input ng-star-inserted {
+    font-weight: 300 !important;
+        font-size: 0.5rem !important;
+        font-style: normal;
+  }
+  :host::ng-deep.mat-card-content{
+    margin-bottom: 0px !important;
+  }
+  :host::ng-deep.mat-tab-label {
+    height: 25px !important;
+    font-size: 10px !important;
+    min-width: 50px !important;
+  }
+  span{
+    font-size: 12px !important;
+  }
+
+  :host::ng-deep .igx-paginator__select{
+    display: none !important;
+}
+
+:host::ng-deep.igx-grid__td {
+  font-size: 0.7rem;
+  min-height: 0.8rem;
+}
+
+:host::ng-deep.igx-grid-toolbar{
+  display: none !important;
+}
+
+
+
+:host {
+  display: block;
+  padding: 0 16px;
+
+  ::ng-deep {
+    .igx-dialog__window {
+      min-width: 200px;
+      width: 200px;
+    }
+  }
+}

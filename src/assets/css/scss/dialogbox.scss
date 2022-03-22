@@ -450,7 +450,6 @@ app-intake-list-header {
 
   .mat-tab-label.mat-tab-label {
     &:hover {
-      // border-bottom: 2px solid #2a98c7;
       color: #000;
     }
   }
@@ -1436,12 +1435,6 @@ app-evidences {
       }
     }
   }
-
-  // .mat-form-field-label {
-  //   .ng-star-inserted {
-  //     color: #2a98c7;
-  //   }
-  // }
 
   .average-matter {
     .mat-tab-header {

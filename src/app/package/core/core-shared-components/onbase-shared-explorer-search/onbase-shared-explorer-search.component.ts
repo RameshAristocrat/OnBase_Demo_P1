@@ -8,7 +8,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { isEmptyString } from 'src/app/package/modules/rdap-shared-components/utils/shared-utils';
-
+import * as doctypeData from 'src/assets/config/documenttype';
+import { IgxDialogComponent } from '@infragistics/igniteui-angular';
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -24,7 +25,7 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   //@Output() onSearchSumbit = new EventEmitter<any>();
-
+  @ViewChild('alert', { static: true }) public notificationAlert: IgxDialogComponent;
   public configdata;
   public routedata;
   public routedoctypedata;
@@ -52,6 +53,9 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
   loopGridContent: any[];
   routers: Router;
   selbasedoctype: any;
+  basedocumenttypeData: any[];
+  doctypeddldata: any[];
+  message:any;
   //= ['select', 'position'];
 
   //dataSource = new MatTableDataSource(ELEMENT_DATA);
@@ -61,27 +65,59 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
 
   @Output() searchfilterdata = new EventEmitter<any>();
   constructor(private httpClient: HttpClient, location: Location, private _router: Router,
-    public fb: FormBuilder, private _snackBar: MatSnackBar, private cd: ChangeDetectorRef) {
+    public fb: FormBuilder, private _snackBar: MatSnackBar, public cd: ChangeDetectorRef) {
+    this.doctypeddldata = [];
+    this.basedocumenttypeData = [];
+    this.basedocumenttypeData.push(doctypeData.doctypeData[0]);
+    this.doctypeddldata.push(doctypeData.doctypeData);
+    this.doctypeddldata = this.doctypeddldata[0];
     this.httpClient.get("assets/config/baseSearchControlConfig.json").subscribe(data => {
       this.configdata = data;
       this.getBaseSearchFormData();
       this.basesearchform.controls['document'].setValue(1);
       this.basesearchform.controls['documentlist'].setValue(1);
       this.basesearchform.controls['documenttypegroup'].setValue(1);
-      this.basesearchform.controls['basedocumenttype'].setValue("ACH");
+      this.basesearchform.controls['basedocumenttype'].setValue("");
       console.log(this.basesearchform.get('basedocumenttype').value)
-      this.selbasedoctype = this.basesearchform.get('basedocumenttype').value;
+      //this.selbasedoctype = this.basesearchform.get('basedocumenttype').value;
     });
   }
 
   ngOnInit(): void {
+    this.getBaseSearchFormData();
   }
   public checkError = (controlName: string, errorName: string) => {
     return this.doctypesearchform.controls[controlName].hasError(errorName);
   }
-  public baseSearchOnChange = () => {
-    this.selbasedoctype = this.basesearchform.get('basedocumenttype').value;
-    this.cd.detectChanges();
+  public baseSearchOnChange = (event, item, ctrlname) => {
+    console.log("baseSearchOnChange event", event);
+    console.log("baseSearchOnChange ctrlname", ctrlname);
+    debugger
+    if (ctrlname == "documenttypegroup") {
+      this.selbasedoctype = "";
+      this.basesearchform.controls['basedocumenttype'].setValue("");
+      let tempFilterdata;
+      let doctypgrpid = this.basesearchform.get("documenttypegroup").value;
+      this.basedocumenttypeData = [];
+      this.doctypeddldata = [];
+      this.basedocumenttypeData.push(doctypeData.doctypeData);
+      if (doctypgrpid != 1) {
+        tempFilterdata = this.basedocumenttypeData[0].filter(x => {
+          return x.dtgrid == doctypgrpid
+        });
+      } else {
+        tempFilterdata = this.basedocumenttypeData[0]
+      }
+      this.doctypeddldata = tempFilterdata;
+      console.log(this.doctypeddldata);
+      this.cd.detectChanges();
+    } else if (ctrlname == 'basedocumenttype') {
+      debugger
+      console.log("ctrlname basedocumenttype",ctrlname);
+      this.selbasedoctype = event.id;
+      console.log("ctrlname selbasedoctype",this.selbasedoctype);
+      this.cd.detectChanges();
+    }
   }
 
   getBaseSearchFormData() {
@@ -112,9 +148,9 @@ export class OnbaseSharedExplorerSearchComponent implements OnInit {
 
     });
     this.basesearchform = new FormGroup(frmgrp);
+    this.searchfilterdata.emit({ doctypesearchform: null, basesearchform: this.basesearchform })
   }
   doctypesearchemitter(event) {
     this.searchfilterdata.emit({ doctypesearchform: event, basesearchform: this.basesearchform })
   }
-
 }

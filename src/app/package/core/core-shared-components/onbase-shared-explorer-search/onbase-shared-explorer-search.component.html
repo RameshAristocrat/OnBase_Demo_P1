@@ -28,7 +28,7 @@
                             <mat-error *ngIf="checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error>
                         </mat-form-field>
-                        <div class="form-group" *ngIf="item.type =='select'">
+                        <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname != 'basedocumenttype'">
                             <fieldset class="form-group">
                                 <ng-select 
                                 class="required"
@@ -38,7 +38,7 @@
                                     bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
                                     bindValue="id"
                                     [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
-                                    (change)="baseSearchOnChange()"
+                                    (change)="baseSearchOnChange($event,item,item.formcontrolname)"
                                     [multiple]="item.multiple" appendTo="body" required>
                                     <ng-template ng-option-tmp let-item="item">
                                         {{item.name}}
@@ -47,6 +47,24 @@
                             </fieldset>
                             <!-- <mat-error *ngIf="item.type =='select' && checkError(item.formcontrolname, item.required)">
                                 {{item.label}} required</mat-error> -->
+                        </div>
+                        <div class="form-group" *ngIf="item.type =='select' && item.formcontrolname == 'basedocumenttype'">
+                            <fieldset class="form-group">
+                                <ng-select 
+                                class="required"
+                                labelForId="{{item.label}}" 
+                                [items]="doctypeddldata" 
+                                placeholder="{{item.placeholder}}    *"
+                                    bindLabel="{{item.bindname}}" formControlName="{{item.formcontrolname}}"
+                                    bindValue="id"
+                                    [clearable]="item.clearable" [virtualScroll]="item.virtualScroll"
+                                    (change)="baseSearchOnChange($event,item,item.formcontrolname)"
+                                    [multiple]="item.multiple" appendTo="body" required>
+                                    <ng-template ng-option-tmp let-item="item">
+                                        {{item.name}}
+                                    </ng-template>
+                                </ng-select>
+                            </fieldset>
                         </div>
                     </div>
                 </div>

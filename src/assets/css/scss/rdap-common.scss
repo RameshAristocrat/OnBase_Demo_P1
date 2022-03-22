@@ -9,7 +9,6 @@
   overflow-x: hidden !important;
 }
 
-//  Hidden body scroll for side-panel
 .blockCursor {
   pointer-events: none;
 }
@@ -455,9 +454,6 @@ app-add-user #chart.scaleXPlus text.c3-chart-arcs-title {
   padding: 15px;
 }
 
-// .mtm-10 {
-//   margin-top: -10px;
-// }
 
 .sortoption {
   margin-top: -10px;
@@ -1560,7 +1556,6 @@ html.cdk-global-scrollblock {
 .matter-add-popup {
   width: 954px;
   max-width: 70%;
-  //min-width: 954px;
 }
 
 text.c3-chart-arcs-title {
@@ -1578,25 +1573,6 @@ text.c3-chart-arcs-title {
   height: auto;
   padding: 15px;
 }
-
-// .migrate-popup
-//   .ng-select.ng-select-multiple
-//   .ng-select-container
-//   .ng-value-container
-//   .ng-value {
-//   color: #333 !important;
-//   background-color: #e4e4e4 !important;
-// }
-
-// .migrate-popup
-//   .ng-select.ng-select-multiple
-//   .ng-select-container
-//   .ng-value-container
-//   .ng-value
-//   .ng-value-icon {
-//   cursor: pointer;
-//   color: darkgray;
-// }
 
 app-intake-details,
 app-intake-details-newtab,
@@ -1653,8 +1629,6 @@ app-intake-documents .tablegrid table ul li {
 app-insurance-details
   .mat-form-field-can-float.mat-form-field-should-float
   .mat-form-field-label {
-  // font-size: 16px !important;
-  // font-weight: 700;
   font-family: GothamRounded-Book;
   color: #000 !important;
 }
@@ -1681,53 +1655,6 @@ app-insurance-details
   height: 67px !important;
 }
 
-// .addEvent-popup {
-//   .mat-form-field-appearance-legacy {
-//     .mat-form-field-label {
-//       color: rgba(0, 0, 0, 0.54);
-//       font-size: 16px !important;
-//       font-weight: 700;
-//     }
-//   }
-
-//   .mat-form-field-empty.mat-form-field-label {
-//     font-size: 12px !important;
-//     font-family: "GothamRounded-Book";
-//     color: #000000 !important;
-//     font-weight: normal !important;
-//   }
-// }
-
-// #BasicDetails {
-//   .mat-form-field-appearance-legacy {
-//     .mat-form-field-label {
-//       color: rgba(0, 0, 0, 0.54);
-//       font-size: 16px !important;
-//       font-weight: 700;
-//     }
-//   }
-
-//   .mat-form-field-empty.mat-form-field-label,
-//   textarea {
-//     font-size: 12px !important;
-//   }
-// }
-
-// #MaritalDetails {
-//   .mat-form-field-appearance-legacy {
-//     .mat-form-field-label {
-//       color: rgba(0, 0, 0, 0.54);
-//       font-size: 16px !important;
-//       font-weight: 700;
-//     }
-//   }
-
-//   .mat-form-field-empty.mat-form-field-label {
-//     font-size: 13px !important;
-//     font-weight: normal !important;
-//   }
-// }
-
 #HealthDetails {
   .mat-select-value {
     font-size: 13px !important;
@@ -1741,7 +1668,6 @@ app-insurance-details
 .employmentDetailsStyle
   .mat-form-field-appearance-legacy
   .mat-form-field-label {
-  // font-size: 16px !important;
   font-weight: 700;
 }
 
@@ -1879,7 +1805,6 @@ app-insurance-details
   overflow-x: hidden;
 }
 
-// ckeditor css style
 
 ::ng-deep .ck-content {
   ol,
@@ -2009,7 +1934,6 @@ app-insurance-details
   }
 }
 
-// ck-editor Global scss code
 .ck-editor.ck-rounded-corners {
   .ck.ck-editor__editable_inline {
     &:first-child {
@@ -2087,7 +2011,6 @@ app-insurance-details
   }
 }
 
-// mat checkbox disabled
 .mat-checkbox-disabled {
   .mat-checkbox-layout {
     .mat-checkbox-inner-container {
@@ -2351,8 +2274,6 @@ perfect-scrollbar {
   }
 }
 
-// all icon and header dropdown css starts
-
 .sub-icon-box {
   display: inline-block;
   vertical-align: top;
@@ -2391,11 +2312,6 @@ perfect-scrollbar {
     .ng-select {
       width: 200px;
       bottom: 10px;
-      // .ng-select-container {
-      //   .ng-value-container {
-      //     padding: 15px 0 !important;
-      //   }
-      // }
     }
     label {
       margin: 17px 10px 0 0;
@@ -2446,10 +2362,6 @@ perfect-scrollbar {
     margin: 10px 12px 0 12px;
   }
 }
-
-// all icon and header dropdown css ends
-
-/*** Start CSS Start For Total Amount Paid ***/
 
 .total-amount-main {
   clear: both;

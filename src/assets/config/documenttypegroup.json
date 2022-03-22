@@ -2,15 +2,12 @@
     "id":1,
     "name": "All"
   }, {
-    "id":2,
+    "id":102,
     "name": "Accounts Payable"
   }, {
-    "id":3,
+    "id":103,
     "name": "Accounts Receivable"
   }, {
-    "id":4,
+    "id":104,
     "name": "Signature Authority"
-  }, {
-    "id":4,
-    "name": "System Document"
   }]

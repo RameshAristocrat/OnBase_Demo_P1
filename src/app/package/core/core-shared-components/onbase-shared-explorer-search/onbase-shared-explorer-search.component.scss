@@ -73,3 +73,151 @@ table {
 }
 
 
+input, select, textarea, label, ng-select, igx-date-picker, igx-input-group, matInput, ng-dropdown-panel {
+  font-size: 10px !important;
+  }
+
+  table, th, td {
+      
+    }
+    :host {
+      ::ng-deep{
+        .input.mat-input-element{
+          font-size: 10px !important;
+        }
+      }
+    }
+    th, td {
+      padding: 3px !important;
+    }
+    .mat-form-field{
+      width: 100%;
+      font-size: 10px;
+  }
+  
+  :host::ng-deep .mat-form-field {
+      .mat-input-element {
+          margin-top: 0.9em !important;
+      }
+  }
+  :host::ng-deep .row {
+    //height: 50px !important;
+  }
+  :host::ng-deep .mat-input-element{
+      font-size: 10px;
+  }
+  :host::ng-deep .ng-select-container {
+    font-size: 10px !important;
+  }    
+  .colBorder{
+    border: 1px solid rgb(224, 221, 221);
+  }
+  // :host {
+  //   ::ng-deep {
+  //     .ng-select .ng-select-container {
+  //       min-height: 40px;
+  //       padding-bottom: 0em !important;
+  //     }
+  //   }}
+  //   :host {
+  //     ::ng-deep {
+  //       .ng-select.ng-select-single .ng-select-container {
+  //         height: 40px;
+  //         padding-bottom: 0em !important;
+  //       }
+  //     }}
+      :host {
+        ::ng-deep {
+          .ng-select{
+            height: 45px !important;
+            padding-bottom: 0.5em !important;
+          }
+        }
+      }
+
+      .grid-container {
+        margin: 0px;
+        //min-height:calc(100vh - 100px); 
+      }
+    
+      .mat-form-field{
+        width: 100%;
+    }
+    
+    :host::ng-deep .mat-form-field {
+        .mat-input-element {
+            margin-top: 0.9em !important;
+        }
+    }
+    
+    .mat-card {
+        background: #fff;
+        //color: rgb(174 171 171);
+    }
+    
+    .mat-card-header .mat-card-title {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    input, select, textarea, label, ng-select {
+      font-size: 8px;
+      }
+    
+      span{
+        font-size:14px;
+      }
+    
+      :host::ng-deep.igx-date-picker__input-date igx-input-group__input ng-star-inserted {
+        font-weight: 300 !important;
+            font-size: 0.5rem !important;
+            font-style: normal;
+      }
+      :host::ng-deep.mat-card-content{
+        margin-bottom: 0px !important;
+      }
+      :host::ng-deep.mat-tab-label {
+        height: 25px !important;
+        font-size: 10px !important;
+        min-width: 50px !important;
+      }
+      span{
+        font-size: 12px !important;
+      }
+    
+      :host::ng-deep .igx-paginator__select{
+        display: none !important;
+    }
+    
+    :host::ng-deep.igx-grid__td {
+      font-size: 0.7rem;
+      min-height: 0.8rem;
+    }
+    
+    :host::ng-deep.igx-grid-toolbar{
+      display: none !important;
+    }
+    
+    
+    
+    :host {
+      display: block;
+      padding: 0 16px;
+    
+      ::ng-deep {
+        .igx-dialog__window {
+          min-width: 200px;
+          width: 200px;
+        }
+      }
+    }
+    
+
+  //   .igx-typography .igx-input-group__input, .igx-typography .igx-input-group__textarea {
+  //     font-weight: 300 !important;
+  //     font-size: 0.875rem !important;
+  //     font-style: normal;
+  //     letter-spacing: 0.009375rem;
+  //     text-transform: none;
+  //     line-height: 1.5rem;
+  //     margin: 0;
+  // }

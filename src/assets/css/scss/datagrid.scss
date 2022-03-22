@@ -19,7 +19,6 @@
     thead {
       th {
         display: table-cell;
-        // min-width: 162px;
       }
     }
   }
@@ -56,7 +55,6 @@
         span {
           @include tablefonts;
           display: inline;
-          //  white-space: wrap;
           word-break: break-all;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -623,7 +621,7 @@ th.mat-header-cell {
     }
   }
 }
-// Ag Grid -- Global Styles
+
 .ag-grid.ag-theme-alpine {
   font-family: GothamRounded-Book;
   .ag-root-wrapper {
@@ -828,7 +826,7 @@ th.mat-header-cell {
   background-color: $bordergray !important;
 }
 
-// memo dialog
+
 .memo-container {
   .modal-header {
     .modal-title {

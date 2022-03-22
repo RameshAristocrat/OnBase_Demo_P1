@@ -1,7 +1,6 @@
 @import "./cloudlex-variables.scss";
 @import "./mixins.scss";
 
-// mat input field
 .mat-form-field {
   .mat-form-field-wrapper {
     .mat-form-field-flex {
@@ -149,12 +148,11 @@
 .mat-form-field-outline-gap {
   width: 74px !important;
 }
-// Mat Required Caret-mark-color
+
 .mat-placeholder-required.mat-form-field-required-marker {
   color: #f44336 !important;
 }
 
-//mat-radio Button
 .mat-radio-button {
   .mat-radio-label-content {
     font-size: 13.44px;
@@ -168,7 +166,7 @@
   }
 }
 
-// Ng select Common code
+
 .ng-select {
   .ng-select-container {
     .ng-value-container {
@@ -408,7 +406,6 @@
   }
 }
 
-// sidebar select box with search content
 .searh-select-box {
   margin-top: -12px;
   padding-bottom: 5px;
@@ -442,7 +439,6 @@
   }
 }
 
-// mat-checkbox
 .mat-checkbox {
   .mat-checkbox-layout {
     .mat-checkbox-inner-container {

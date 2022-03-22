@@ -8,8 +8,13 @@ import { DBoardComponent } from './d-board/d-board.component';
 import { DatatableComponent } from './components/datatable/datatable.component';
 import { OktaAuthGuard } from './okta-auth/okta-auth-guard';
 import { RdOktaCallbackComponent } from './okta-auth/rd-okta-callback/rd-okta-callback.component';
+import { CallbackComponent } from './callback/callback.component';
 
-const routes: Routes = [
+const routes: Routes = [  {
+  path: "callback",
+  component: CallbackComponent,
+  canActivate:[OktaAuthGuard]
+},
   {
     path: "login",
     component: LoginComponent,

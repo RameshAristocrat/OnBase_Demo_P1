@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
@@ -19,7 +19,7 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatBadgeModule } from "@angular/material/badge";
 import { MatSliderModule } from "@angular/material/slider";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
-import {MatIconModule} from "@angular/material/icon";
+import { MatIconModule } from "@angular/material/icon";
 //import { MatNativeDateModule, MatIconModule, MatOptionModule, MatChipsModule, MatSidenavModule, MatTreeModule } from "@angular/material";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatTabsModule } from "@angular/material/tabs";
@@ -30,27 +30,38 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatToolbarModule } from "@angular/material/toolbar";
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 //import { MatPasswordStrengthModule } from "@angular-material-extensions/password-strength";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { GoogleChartsModule } from 'angular-google-charts';
-import { MatNativeDateModule} from "@angular/material/core";
+import { IgxCardModule, IgxCsvExporterService, IgxGridModule } from "@infragistics/igniteui-angular";
+import {
+  IgxButtonModule,
+  IgxIconModule,
+  IgxInputGroupModule,
+  IgxRippleModule,
+  IgxChipsModule,
+  IgxActionStripModule,
+  IgxFocusModule,
+  IgxDropDownModule,
+  IgxRadioModule,
+  IgxNavbarModule,
+  IgxNavigationDrawerModule,
+  IgxToggleModule,
+  IgxDialogModule,
+  IgxTabsModule
+} from "@infragistics/igniteui-angular";
+import { MatNativeDateModule } from "@angular/material/core";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { FormsModule } from '@angular/forms';
-import { IgxGridModule } from "igniteui-angular";
-import { 
-	IgxButtonModule,
-	IgxIconModule,
-	IgxInputGroupModule,
-	IgxRippleModule,
-	IgxChipsModule
- } from "igniteui-angular";
-//import { IgxGridModule } from 'igniteui-angular';
+import { IgxExcelExporterService } from "@infragistics/igniteui-angular";
+import { NgxSpinnerModule } from "ngx-spinner";
 @NgModule({
   declarations: [],
-  providers: [
-   // { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
+  providers: [IgxExcelExporterService,
+    IgxCsvExporterService
+    // { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
   ],
   imports: [
     CommonModule,
@@ -70,16 +81,16 @@ import {
     MatListModule,
     //MatNavList,
     MatDatepickerModule,
-   // MatMomentDateModule,
+    // MatMomentDateModule,
     MatBadgeModule,
     MatToolbarModule,
-    MatSliderModule, MatAutocompleteModule, 
+    MatSliderModule, MatAutocompleteModule,
     MatNativeDateModule,
-     MatIconModule,
-     // MatOptionModule,
+    MatIconModule,
+    // MatOptionModule,
     MatGridListModule, MatTabsModule, MatSnackBarModule, MatExpansionModule, MatProgressBarModule, MatSlideToggleModule, MatStepperModule,
     MatMenuModule,
-   // MatChipsModule,
+    // MatChipsModule,
     //MatTreeModule,
     //MatPasswordStrengthModule, 
     MatButtonToggleModule,
@@ -91,11 +102,23 @@ import {
     IgxInputGroupModule,
     IgxRippleModule,
     IgxChipsModule,
+    IgxActionStripModule,
+    IgxFocusModule,
+    IgxDropDownModule,
+    IgxRadioModule,
+    IgxNavbarModule,
+    IgxNavigationDrawerModule,
+    IgxToggleModule,
+    IgxDialogModule,
+    IgxTabsModule,
+    IgxCardModule,
+    NgxSpinnerModule,
     //AngularFontAwesomeModule
     //NativeDateAdapter
     NgSelectModule,
     FormsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
     MatButtonModule,
     MatInputModule,
@@ -115,10 +138,9 @@ import {
     MatDatepickerModule,
     //MatMomentDateModule,
     MatBadgeModule,
-    MatSliderModule, MatAutocompleteModule, 
-    MatNativeDateModule, 
+    MatSliderModule, MatAutocompleteModule,
+    MatNativeDateModule,
     MatIconModule,
-    IgxGridModule, 
     //MatOptionModule,
     MatGridListModule, MatTabsModule, MatSnackBarModule, MatExpansionModule, MatProgressBarModule, MatSlideToggleModule, MatStepperModule,
     MatMenuModule,
@@ -136,6 +158,17 @@ import {
     IgxInputGroupModule,
     IgxRippleModule,
     IgxChipsModule,
+    IgxActionStripModule,
+    IgxFocusModule,
+    IgxDropDownModule,
+    IgxRadioModule,
+    IgxNavbarModule,
+    IgxNavigationDrawerModule,
+    IgxToggleModule,
+    NgxSpinnerModule,
+    IgxDialogModule,
+    IgxTabsModule,
+    IgxCardModule,
     //FontAwesomeModule
     //NativeDateAdapter
     NgSelectModule,
